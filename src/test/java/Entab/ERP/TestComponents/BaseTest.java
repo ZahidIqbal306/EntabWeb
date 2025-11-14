@@ -1,0 +1,81 @@
+package Entab.ERP.TestComponents;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.Properties;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+
+import Entab.ERP.Pages.HomePage;
+import Entab.ERP.Pages.LoginPage;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class BaseTest {
+	
+	public WebDriver driver;
+	public LoginPage loginPage;
+	public WebDriver intializeWebDriver() throws IOException
+	{
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Entab\\ERP\\Resources\\GlobalData.properties");
+		prop.load(fis);
+		
+		String browserName = prop.getProperty("browser");
+		if(browserName.equalsIgnoreCase("chrome"))
+		{
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+		}
+		else if (browserName.equalsIgnoreCase("firefox"))
+		{
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+		}
+		else if (browserName.equalsIgnoreCase("edge"))
+		{
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+		}
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		return driver;		
+	}
+	
+	@BeforeTest
+	public LoginPage lauchApplication() throws IOException, InterruptedException
+	{
+		driver = intializeWebDriver();
+		loginPage = new LoginPage(driver);
+		loginPage.loadUrl();
+		return loginPage;
+	}
+	
+	@AfterTest
+	public void logOut() throws InterruptedException
+	{
+		HomePage homePage = new HomePage(driver);
+		homePage.logOut();	
+	}
+	
+	public String getScreenshot(String testcaseName, WebDriver driver) throws  IOException
+	{
+		 File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		 File src = new File(System.getProperty("user.dir")+"//report//" + testcaseName+ ".png");
+		 FileUtils.copyFile(file, src);	
+		 return System.getProperty("user.dir")+ "//report//" + testcaseName+ ".png";
+
+	}	
+	
+
+}
