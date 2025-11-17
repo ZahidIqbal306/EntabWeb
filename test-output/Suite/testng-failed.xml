@@ -6,13 +6,15 @@
   </listeners>
   <test thread-count="5" parallel="tests" name="Login(failed)">
     <classes>
-      <class name="Entab.ERP.Tests.LoginVerification">
+      <class name="Entab.ERP.Tests.HomePageVerification">
         <methods>
+          <include name="verifyProfile"/>
+          <include name="verifyLoginUserName"/>
           <include name="logOut"/>
-          <include name="verifyLogin"/>
           <include name="lauchApplication"/>
+          <include name="verifyLogoutText"/>
         </methods>
-      </class> <!-- Entab.ERP.Tests.LoginVerification -->
+      </class> <!-- Entab.ERP.Tests.HomePageVerification -->
     </classes>
   </test> <!-- Login(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Entab.ERP.Tests.LoginVerification">
+      <class name="Entab.ERP.Tests.HomePageVerification">
         <methods>
           <include name="logOut"/>
-          <include name="verifyLogin"/>
           <include name="lauchApplication"/>
+          <include name="verifyChangePassword"/>
         </methods>
-      </class> <!-- Entab.ERP.Tests.LoginVerification -->
+      </class> <!-- Entab.ERP.Tests.HomePageVerification -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
