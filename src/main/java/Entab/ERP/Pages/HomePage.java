@@ -25,9 +25,11 @@ public class HomePage extends CommonComponents {
 	{
 		threadSleep(2000);
 		profileIcon.click();
+		System.out.println("User is logged out successfully.");
 		threadSleep(2000);
 		hoverText(driver, logout);
 		driver.close();
+		System.out.println("Closed the browser.");
 	}
 
 }

@@ -1,5 +1,7 @@
 package Entab.ERP.Pages;
 import java.io.IOException;
+
+import org.apache.hc.core5.util.Asserts;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,9 +28,19 @@ public class LoginPage extends CommonComponents{
 		System.out.println("Url is loaded successfully : " + url);
 		threadSleep(2000);
 		enterLogin.click();
-		threadSleep(2000);
+		threadSleep(3000);		
 	}
 	
+	@FindBy(xpath = "//div[@class='login-form-blk login-blk']//p[contains(text(),'Enter the registered mobile no. with school')]")
+	WebElement loginPageText;
+	
+	public String verifyLoginPage()
+	{
+		String actualtext = loginPageText.getText();
+		System.out.println(actualtext);
+		return actualtext;
+		
+	}
 	@FindBy (xpath = "//input[@id='txtUserID']")
 	WebElement userId;
 	@FindBy (xpath ="//input[@id='userPassword']")
@@ -40,9 +52,10 @@ public class LoginPage extends CommonComponents{
 	
 	public String loginApplication() throws IOException, InterruptedException
 	{
-		threadSleep(3000);
+		
 		String userName = getPropertyFileData("userName");
 		String password = getPropertyFileData("password");
+		threadSleep(3000);
 		userId.sendKeys(userName);
 		pass.sendKeys(password);
 		loginButton.click();

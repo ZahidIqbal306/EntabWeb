@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-14T11:50:19 IST" name="Default suite" finished-at="2025-11-14T11:50:38 IST" duration-ms="19815">
+  <suite started-at="2025-11-17T11:04:24 IST" name="Suite" finished-at="2025-11-17T11:04:43 IST" duration-ms="19479">
     <groups>
     </groups>
-    <test started-at="2025-11-14T11:50:19 IST" name="Default test" finished-at="2025-11-14T11:50:38 IST" duration-ms="19815">
+    <test started-at="2025-11-17T11:04:24 IST" name="Login" finished-at="2025-11-17T11:04:43 IST" duration-ms="19479">
       <class name="Entab.ERP.Tests.LoginVerification">
-        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Entab.ERP.Tests.LoginVerification@7d0b7e3c]" started-at="2025-11-14T11:50:19 IST" name="lauchApplication" finished-at="2025-11-14T11:50:26 IST" duration-ms="7646" status="PASS">
+        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Entab.ERP.Tests.LoginVerification@32a68f4f]" started-at="2025-11-17T11:04:24 IST" name="lauchApplication" finished-at="2025-11-17T11:04:31 IST" duration-ms="7513" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchApplication -->
-        <test-method signature="verifyLogin()[pri:0, instance:Entab.ERP.Tests.LoginVerification@7d0b7e3c]" started-at="2025-11-14T11:50:26 IST" name="verifyLogin" finished-at="2025-11-14T11:50:33 IST" duration-ms="7295" status="PASS">
+        <test-method signature="verifyLogin()[pri:0, instance:Entab.ERP.Tests.LoginVerification@32a68f4f]" started-at="2025-11-17T11:04:31 IST" name="verifyLogin" finished-at="2025-11-17T11:04:38 IST" duration-ms="7305" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:Entab.ERP.Tests.LoginVerification@7d0b7e3c]" started-at="2025-11-14T11:50:33 IST" name="logOut" finished-at="2025-11-14T11:50:38 IST" duration-ms="4843" status="PASS">
+        <test-method is-config="true" signature="logOut()[pri:0, instance:Entab.ERP.Tests.LoginVerification@32a68f4f]" started-at="2025-11-17T11:04:38 IST" name="logOut" finished-at="2025-11-17T11:04:43 IST" duration-ms="4627" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->
       </class> <!-- Entab.ERP.Tests.LoginVerification -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Login -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -11,8 +11,10 @@ public class LoginVerification extends BaseTest
 	@Test
 	public void verifyLogin() throws IOException, InterruptedException
 	{
-		String text = loginPage.loginApplication();
-		boolean flag = text.contains("Dashboard");
+		String actualLogintext = loginPage.verifyLoginPage();
+		Assert.assertEquals(actualLogintext, "Enter the registered mobile no. with school");		
+		String dashboardText = loginPage.loginApplication();		
+		boolean flag = dashboardText.contains("Dashboard");
 		Assert.assertEquals(flag, true);
 		System.out.println("User is logged in successfuly.");
 	}
