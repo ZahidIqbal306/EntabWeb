@@ -26,7 +26,7 @@ public class LoginPage extends CommonComponents{
 		String url = getPropertyFileData("url");
 		driver.get(url);
 		System.out.println("Url is loaded successfully : " + url);
-		threadSleep(2000);
+		visibilityOfWebElement(enterLogin);
 		enterLogin.click();
 		threadSleep(3000);		
 	}
