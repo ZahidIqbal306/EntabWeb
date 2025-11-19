@@ -9,8 +9,8 @@ public class ExtentReporterNG {
 	public static ExtentReports getExtentReportObject()
 	{
 		//String path = "D:\\Automation\\Inventory\\report\\index.html";
-		//String path = System.getProperty("user.dir")+"\\report\\index.html";
-		String path = System.getProperty("user.dir")+"\\test-output\\report\\Extent.html";
+		String path = System.getProperty("user.dir")+"\\report\\Extent.html";
+		//String path = System.getProperty("user.dir")+"\\test-output\\report\\Extent.html";
 		ExtentSparkReporter esp = new ExtentSparkReporter(path);
 		esp.config().setDocumentTitle("Automation Test Report");
 		esp.config().setReportName("Inventory Automation Test Report");
