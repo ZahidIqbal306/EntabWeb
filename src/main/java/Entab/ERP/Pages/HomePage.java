@@ -21,7 +21,7 @@ public class HomePage extends CommonComponents {
 	
 	public String loginUserName() throws InterruptedException
 	{
-		threadSleep(2000);
+		visibilityOfWebElement(userProfile);
 		String userName = userProfile.getText();
 		System.out.println("Login username is : "+userName);
 		return userName;
@@ -57,11 +57,21 @@ public class HomePage extends CommonComponents {
 	public String profileText()
 	{
 		//hoverText(driver,userProfile);
-		userProfile.click();
-		visibilityOfWebElement(profile);
-		String prText = profile.getText();
-		System.out.println(prText);
-		return prText;
+		if(invisibilityOfWebElement(logout)==true)
+		{
+			userProfile.click();
+			visibilityOfWebElement(profile);
+			String prText = profile.getText();
+			System.out.println(prText);
+			return prText;
+		}
+		else
+		{
+			visibilityOfWebElement(profile);
+			String prText = profile.getText();
+			System.out.println(prText);
+			return prText;
+		}
 	}
 	
 	@FindBy(xpath = "//a[contains(., 'Change Password')]")
@@ -71,11 +81,21 @@ public class HomePage extends CommonComponents {
 	{
 		threadSleep(2000);
 		//hoverText(driver,userProfile);
-		//userProfile.click();
-		visibilityOfWebElement(passText);
-		String cpText = passText.getText();
-		System.out.println(cpText);
-		return cpText;
+		if(invisibilityOfWebElement(logout)==true)
+		{
+			userProfile.click();
+			visibilityOfWebElement(passText);
+			String cpText = passText.getText();
+			System.out.println(cpText);
+			return cpText;
+		}
+		else
+		{
+			visibilityOfWebElement(passText);
+			String cpText = passText.getText();
+			System.out.println(cpText);
+			return cpText;
+		}
 	}
 	
 }

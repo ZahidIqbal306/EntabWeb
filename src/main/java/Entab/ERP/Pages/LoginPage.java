@@ -62,6 +62,7 @@ public class LoginPage extends CommonComponents{
 		threadSleep(4000);
 		String dashoabrd = dasboardText.getText();
 		System.out.println(dashoabrd);
+		
 		return dashoabrd;
 	}	
 

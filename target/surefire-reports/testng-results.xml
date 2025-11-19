@@ -2,40 +2,40 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-19T12:12:21 IST" name="Suite" finished-at="2025-11-19T12:12:45 IST" duration-ms="24221">
+  <suite started-at="2025-11-19T12:24:48 IST" name="Suite" finished-at="2025-11-19T12:25:12 IST" duration-ms="24179">
     <groups>
     </groups>
-    <test started-at="2025-11-19T12:12:21 IST" name="Login Page Test" finished-at="2025-11-19T12:12:38 IST" duration-ms="16432">
+    <test started-at="2025-11-19T12:24:48 IST" name="Login Page Test" finished-at="2025-11-19T12:25:05 IST" duration-ms="16717">
       <class name="Entab.ERP.Tests.LoginVerification">
-        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Entab.ERP.Tests.LoginVerification@231f98ef]" started-at="2025-11-19T12:12:21 IST" name="lauchApplication" finished-at="2025-11-19T12:12:30 IST" duration-ms="8440" status="PASS">
+        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Entab.ERP.Tests.LoginVerification@5890e879]" started-at="2025-11-19T12:24:48 IST" name="lauchApplication" finished-at="2025-11-19T12:24:57 IST" duration-ms="8413" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchApplication -->
-        <test-method signature="verifyLogin()[pri:0, instance:Entab.ERP.Tests.LoginVerification@231f98ef]" started-at="2025-11-19T12:12:30 IST" name="verifyLogin" finished-at="2025-11-19T12:12:37 IST" duration-ms="7408" status="PASS">
+        <test-method signature="verifyLogin()[pri:0, instance:Entab.ERP.Tests.LoginVerification@5890e879]" started-at="2025-11-19T12:24:57 IST" name="verifyLogin" finished-at="2025-11-19T12:25:04 IST" duration-ms="7817" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:Entab.ERP.Tests.LoginVerification@231f98ef]" started-at="2025-11-19T12:12:37 IST" name="logOut" finished-at="2025-11-19T12:12:38 IST" duration-ms="540" status="PASS">
+        <test-method is-config="true" signature="logOut()[pri:0, instance:Entab.ERP.Tests.LoginVerification@5890e879]" started-at="2025-11-19T12:25:04 IST" name="logOut" finished-at="2025-11-19T12:25:05 IST" duration-ms="452" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->
       </class> <!-- Entab.ERP.Tests.LoginVerification -->
     </test> <!-- Login Page Test -->
-    <test started-at="2025-11-19T12:12:21 IST" name="Home Page Test" finished-at="2025-11-19T12:12:45 IST" duration-ms="24221">
+    <test started-at="2025-11-19T12:24:48 IST" name="Home Page Test" finished-at="2025-11-19T12:25:12 IST" duration-ms="24179">
       <class name="Entab.ERP.Tests.HomePageVerification">
-        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Entab.ERP.Tests.HomePageVerification@4f32a3ad]" started-at="2025-11-19T12:12:21 IST" name="lauchApplication" finished-at="2025-11-19T12:12:30 IST" duration-ms="8607" status="PASS">
+        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Entab.ERP.Tests.HomePageVerification@6c4906d3]" started-at="2025-11-19T12:24:48 IST" name="lauchApplication" finished-at="2025-11-19T12:24:56 IST" duration-ms="8082" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchApplication -->
-        <test-method signature="verifyLoginUserName()[pri:1, instance:Entab.ERP.Tests.HomePageVerification@4f32a3ad]" started-at="2025-11-19T12:12:30 IST" name="verifyLoginUserName" finished-at="2025-11-19T12:12:40 IST" duration-ms="9698" status="PASS">
+        <test-method signature="verifyLoginUserName()[pri:1, instance:Entab.ERP.Tests.HomePageVerification@6c4906d3]" started-at="2025-11-19T12:24:56 IST" name="verifyLoginUserName" finished-at="2025-11-19T12:25:06 IST" duration-ms="10047" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginUserName -->
-        <test-method signature="verifyProfile()[pri:2, instance:Entab.ERP.Tests.HomePageVerification@4f32a3ad]" started-at="2025-11-19T12:12:40 IST" name="verifyProfile" finished-at="2025-11-19T12:12:40 IST" duration-ms="177" status="PASS">
+        <test-method signature="verifyProfile()[pri:2, instance:Entab.ERP.Tests.HomePageVerification@6c4906d3]" started-at="2025-11-19T12:25:06 IST" name="verifyProfile" finished-at="2025-11-19T12:25:06 IST" duration-ms="171" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyProfile -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:Entab.ERP.Tests.HomePageVerification@4f32a3ad]" started-at="2025-11-19T12:12:40 IST" name="logOut" finished-at="2025-11-19T12:12:45 IST" duration-ms="5719" status="PASS">
+        <test-method is-config="true" signature="logOut()[pri:0, instance:Entab.ERP.Tests.HomePageVerification@6c4906d3]" started-at="2025-11-19T12:25:06 IST" name="logOut" finished-at="2025-11-19T12:25:12 IST" duration-ms="5820" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->

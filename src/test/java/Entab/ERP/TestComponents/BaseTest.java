@@ -13,7 +13,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import Entab.ERP.Pages.HomePage;
@@ -23,7 +27,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 	
 	public WebDriver driver;
-	public LoginPage loginPage;
+	public static LoginPage loginPage;
 	public WebDriver intializeWebDriver() throws IOException
 	{
 		Properties prop = new Properties();
@@ -52,7 +56,7 @@ public class BaseTest {
 		return driver;		
 	}
 	
-	@BeforeTest
+	@BeforeClass
 	public LoginPage lauchApplication() throws IOException, InterruptedException
 	{
 		driver = intializeWebDriver();
@@ -61,11 +65,17 @@ public class BaseTest {
 		return loginPage;
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void logOut() throws InterruptedException
 	{
 		HomePage homePage = new HomePage(driver);
 		homePage.logOut();	
+	}
+	
+	@AfterSuite
+	public void tearDown() 
+	{
+	    driver.quit();
 	}
 	
 	public String getScreenshot(String testcaseName, WebDriver driver) throws  IOException

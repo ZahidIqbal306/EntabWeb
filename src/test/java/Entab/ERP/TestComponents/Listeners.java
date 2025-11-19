@@ -19,25 +19,24 @@ public class Listeners extends BaseTest implements ITestListener{
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>(); // To handle the multiple test
 	
 	@Override
-	public void onTestStart(ITestResult result) {
-		
+	public void onTestStart(ITestResult result) 
+	{		
 		//extent.createTest("TestCaseName");
 		test = extent.createTest(result.getMethod().getMethodName());
-		extentTest.set(test);// Assign the test id for each test
+		extentTest.set(test); // Assign the test id for each test
 	}
 	
 	@Override
-	public void onTestSuccess(ITestResult result) {
-		
-		extentTest.get().log(Status.PASS, "Test case is : Pass");
+	public void onTestSuccess(ITestResult result) 
+	{		
+		extentTest.get().log(Status.PASS, "Test case : Pass");
 		// Map Constant into the Extent Report
 		Map<String,String> functionality=Constant.getFuncnctionlity(result.getName());	
 				
-		for(String key:functionality.keySet())
-			{
-				test.log(Status.PASS, key+"-"+functionality.get(key)); 
-			}
-
+		 for(String key:functionality.keySet())
+		  {
+			test.log(Status.PASS, key+"-"+functionality.get(key)); 
+		  }
 	}
 	@Override
 	public void onTestFailure(ITestResult result) 
@@ -71,19 +70,22 @@ public class Listeners extends BaseTest implements ITestListener{
 		// Attach Screenshot into the report
 		extentTest.get().addScreenCaptureFromPath(screeshotPath, result.getMethod().getMethodName());
 	}
-	
+
+	@Override
+	public void onFinish(ITestContext context) 
+	{
+		extent.flush(); // Complete the test
+
+	}
 	
 	@Override
-	public void onTestSkipped(ITestResult result) {
+	public void onTestSkipped(ITestResult result) 
+	{
 		
 		extentTest.get().log(Status.SKIP, "Testcase Skip");
 	}
 	
-	@Override
-	public void onFinish(ITestContext context) {
-		extent.flush(); // Complete the test
 
-	}
 	
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
@@ -99,9 +101,5 @@ public class Listeners extends BaseTest implements ITestListener{
 	public void onStart(ITestContext context) {
 
 	}
-	
-
-
-
 
 }

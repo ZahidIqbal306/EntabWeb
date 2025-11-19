@@ -4,15 +4,16 @@
   <listeners>
     <listener class-name="Entab.ERP.TestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Login and Home Page Test(failed)">
+  <test thread-count="5" parallel="tests" name="Home Page Test(failed)">
     <classes>
       <class name="Entab.ERP.Tests.HomePageVerification">
         <methods>
+          <include name="verifyProfile"/>
+          <include name="verifyLoginUserName"/>
           <include name="logOut"/>
           <include name="lauchApplication"/>
-          <include name="verifyChangePassword"/>
         </methods>
       </class> <!-- Entab.ERP.Tests.HomePageVerification -->
     </classes>
-  </test> <!-- Login and Home Page Test(failed) -->
+  </test> <!-- Home Page Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

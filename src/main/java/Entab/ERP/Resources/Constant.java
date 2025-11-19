@@ -9,11 +9,13 @@ public class Constant {
 //======================1st Part =================================================================
 	
 	// verify Login Functionality
-	static Map<String,String> verifyLogin=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyLogin =new LinkedHashMap<String, String>();
 	
-	// Verify FAQ Page
-	static Map<String,String> verifyFAQPage=new LinkedHashMap<String, String>();
-	static Map<String,String> validateFAQPage=new LinkedHashMap<String, String>();
+	// Verify Home Page
+	static Map<String,String> verifyLoginUserName=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyProfile=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyChangePasswordText=new LinkedHashMap<String, String>();
+
 
 //======================2nd Part=================================================================
 
@@ -29,19 +31,25 @@ public class Constant {
 		verifyLogin.put("Step 4 : ","Click Login button");
 		verifyLogin.put("Step 5 : ","User has logged in successfully.");
 
-   // --------------- FAQ Page --------------------------------------------------------
-		//Verify FAQ Page
-		verifyFAQPage.put("Step 1 : ","Login with Valid Credential");
-		verifyFAQPage.put("Step 2 : ","Open the FAQ page");
-		verifyFAQPage.put("Step 3 : ","FAQ Page is opening successfully.");
+   // --------------- Home Page --------------------------------------------------------
+		//Verify Login User Name
+		verifyLoginUserName.put("Step 1 : ","Login with Valid Credential.");
+		verifyLoginUserName.put("Step 2 : ","Verify the Login username.");
+		verifyLoginUserName.put("Step 3 : ","Username is showing correctly.");
+	
+		//Verify Profile Menu
+		verifyProfile.put("Step 1 : ","Login with Valid Credential.");
+		verifyProfile.put("Step 2 : ","Click on the Employee Name.");
+		verifyProfile.put("Step 3 : ","Verify the Profile Submenu.");
+		verifyProfile.put("Step 4 : ","Profile menu is showing.");
 		
-		//Validate FAQ Page Data
-		validateFAQPage.put("Step 1 : ","Login with Valid Credential");
-		validateFAQPage.put("Step 2 : ","Open the FAQ page");
-		validateFAQPage.put("Step 3 : ","Select HRMS 2.0 Module");
-		validateFAQPage.put("Step 4 : ","Select Employee Creation Transaction");
-		validateFAQPage.put("Step 5 : ","Click on the Get Details");
-		validateFAQPage.put("Step 6 : ","Data is showing correctly according to filter.");
+		//Verify Login User Name
+		verifyChangePasswordText.put("Step 1 : ","Login with Valid Credential.");
+		verifyChangePasswordText.put("Step 2 : ","Click on the Employee Name.");
+		verifyChangePasswordText.put("Step 3 : ","Verify the Change Password Submenu.");
+		verifyChangePasswordText.put("Step 4 : ","Change Password Submenu is showing.");
+		
+
 	}
 	
  // ===========================3rd Part===========================================================================
@@ -55,15 +63,19 @@ public class Constant {
 			{
 				return verifyLogin;
 			}
-	// ------------------------------ FAQ Mgmt -------------------------------------------------------			
+	// ------------------------------ Home Page -------------------------------------------------------			
 			
-			else if(key.equalsIgnoreCase("verifyFAQPage"))
+			else if(key.equalsIgnoreCase("verifyLoginUserName"))
 			{
-				return verifyFAQPage;
+				return verifyLoginUserName;
 			}
-			else if(key.equalsIgnoreCase("validateFAQPage"))
+			else if(key.equalsIgnoreCase("verifyProfile"))
 			{
-				return validateFAQPage;
+				return verifyProfile;
+			}
+			else if(key.equalsIgnoreCase("verifyChangePasswordText"))
+			{
+				return verifyChangePasswordText;
 			}
 			
 		return defaultFun;
