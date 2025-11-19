@@ -26,7 +26,8 @@ public class LoginPage extends CommonComponents{
 		String url = getPropertyFileData("url");
 		driver.get(url);
 		System.out.println("Url is loaded successfully : " + url);
-		visibilityOfWebElement(enterLogin);
+		threadSleep(5000);
+		//visibilityOfWebElement(enterLogin);
 		enterLogin.click();
 		threadSleep(3000);		
 	}
@@ -51,8 +52,7 @@ public class LoginPage extends CommonComponents{
 	WebElement dasboardText;
 	
 	public String loginApplication() throws IOException, InterruptedException
-	{
-		
+	{		
 		String userName = getPropertyFileData("userName");
 		String password = getPropertyFileData("password");
 		threadSleep(3000);
