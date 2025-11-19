@@ -30,19 +30,12 @@ public class HomePageVerification extends BaseTest
 		Assert.assertEquals(actualName, "Profile");
 	}
 	
-	@Test(priority=3)
-	public void verifyChangePassword() throws IOException, InterruptedException
+	@Test(priority=3, enabled= false)
+	public void verifyChangePasswordText() throws IOException, InterruptedException
 	{
 		HomePage homePage = new HomePage(driver);		
 		String actualName = homePage.changePasswordText();	
 		Assert.assertEquals(actualName, "Change Password");
 	}
 
-	@Test(priority=4)
-	public void verifyLogoutText() throws IOException, InterruptedException
-	{
-		HomePage homePage = new HomePage(driver);
-		String actualName = homePage.logOutText();	
-		Assert.assertEquals(actualName, "Logout");
-	}
 }

@@ -32,13 +32,23 @@ public class HomePage extends CommonComponents {
 	
 	public void logOut() throws InterruptedException
 	{
-		threadSleep(2000);
-		userProfile.click();
-		System.out.println("User is logged out successfully.");
-		threadSleep(2000);
-		hoverText(driver, logout);
-		driver.close();
-		System.out.println("Closed the browser.");
+		if(invisibilityOfWebElement(logout)==true)
+		{
+			userProfile.click();
+			visibilityOfWebElement(logout);
+			logout.click();
+			System.out.println("User is logged out successfully.");
+			driver.close();
+			System.out.println("Closed the browser.");
+		}
+		else
+		{
+			visibilityOfWebElement(logout);
+			logout.click();
+			System.out.println("User is logged out successfully.");
+			driver.close();
+			System.out.println("Closed the browser.");
+		}
 	}
 	
 	@FindBy(xpath = "//a[@class='profile']")
@@ -46,7 +56,9 @@ public class HomePage extends CommonComponents {
 	
 	public String profileText()
 	{
-		hoverText(driver,userProfile);
+		//hoverText(driver,userProfile);
+		userProfile.click();
+		visibilityOfWebElement(profile);
 		String prText = profile.getText();
 		System.out.println(prText);
 		return prText;
@@ -58,26 +70,12 @@ public class HomePage extends CommonComponents {
 	public String changePasswordText() throws InterruptedException
 	{
 		threadSleep(2000);
-		hoverText(driver,userProfile);
+		//hoverText(driver,userProfile);
 		//userProfile.click();
-		threadSleep(2000);
+		visibilityOfWebElement(passText);
 		String cpText = passText.getText();
 		System.out.println(cpText);
 		return cpText;
 	}
 	
-	@FindBy(xpath="//a[@class='logout']")
-	WebElement logoutText;
-	
-	public String logOutText() throws InterruptedException
-	{
-		threadSleep(2000);
-		hoverText(driver,userProfile);
-		threadSleep(3000);
-		String logText = logoutText.getText();
-		System.out.println(logText);
-		return logText;
-	}
-	
-
 }

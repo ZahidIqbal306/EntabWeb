@@ -6,9 +6,15 @@
 		<listener class-name="Entab.ERP.TestComponents.Listeners" />
 	</listeners>
 
-	<test name="Login">
+	<test name="Login Page Test">
 		<classes>
-			<class name="Entab.ERP.Tests.HomePageVerification" />
+			<class name="Entab.ERP.Tests.LoginVerification" />	
+		</classes>
+	</test>
+	
+	<test name="Home Page Test">
+		<classes>
+			<class name="Entab.ERP.Tests.HomePageVerification" />	
 		</classes>
 	</test>
 	

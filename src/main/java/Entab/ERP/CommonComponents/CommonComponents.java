@@ -1,12 +1,15 @@
 package Entab.ERP.CommonComponents;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.reactivex.rxjava3.functions.Action;
 
@@ -34,6 +37,33 @@ public class CommonComponents
 	{
 		Thread.sleep(time);
 	}
+	
+	// Explicit wait - Visibility Of WebElemnt	
+	public void visibilityOfWebElement(WebElement ele)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(ele));
+	}
+	
+	// Explicit Wait - Visibility of Element by locator
+	public void visibityOfElementByLocator(By locator)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));		
+	}
+	
+	// Explicit wait - Visibility Of WebElemnt	
+	public boolean invisibilityOfWebElement(WebElement ele)
+	{
+		 try {
+		        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		        return wait.until(ExpectedConditions.invisibilityOf(ele));
+		     } 
+		 catch (Exception e) 
+		    {
+		        return false;
+		    }
+		}
 	
 	// Hover the Mouse with 1 element - Overloading
 	public void hoverText(WebDriver driver, WebElement ele1)
