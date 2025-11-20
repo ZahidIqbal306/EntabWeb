@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.reactivex.rxjava3.functions.Action;
@@ -70,6 +71,13 @@ public class CommonComponents
 	{
 		Actions a = new Actions(driver);
 		a.moveToElement(ele1).click().build().perform();		
+	}
+	
+	// Select drop down via Value
+	public void selectByValue(WebElement ele, String value)
+	{
+		Select a = new Select(ele);
+		a.selectByValue(value);		
 	}
 	
 

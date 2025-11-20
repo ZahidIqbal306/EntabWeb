@@ -1,202 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-19T17:56:25 IST" name="Suite" finished-at="2025-11-19T17:57:13 IST" duration-ms="47972">
+  <suite started-at="2025-11-20T14:23:52 IST" name="Suite" finished-at="2025-11-20T14:24:41 IST" duration-ms="48969">
     <groups>
     </groups>
-    <test started-at="2025-11-19T17:56:25 IST" name="Login Page Test" finished-at="2025-11-19T17:57:13 IST" duration-ms="47972">
+    <test started-at="2025-11-20T14:23:52 IST" name="Login Page Test" finished-at="2025-11-20T14:24:41 IST" duration-ms="48969">
       <class name="Entab.ERP.Tests.LoginVerification">
-        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Entab.ERP.Tests.LoginVerification@4d1c005e]" started-at="2025-11-19T17:56:25 IST" name="lauchApplication" finished-at="2025-11-19T17:56:31 IST" duration-ms="6639" status="PASS">
+        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Entab.ERP.Tests.LoginVerification@4d1c005e]" started-at="2025-11-20T14:23:52 IST" name="lauchApplication" finished-at="2025-11-20T14:24:03 IST" duration-ms="10557" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchApplication -->
-        <test-method signature="verifyLogin()[pri:0, instance:Entab.ERP.Tests.LoginVerification@4d1c005e]" started-at="2025-11-19T17:56:32 IST" name="verifyLogin" finished-at="2025-11-19T17:56:37 IST" duration-ms="5066" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='login-form-blk login-blk']//p[contains(text(),'Enter the registered mobile no. with school')]"}
-  (Session info: chrome=142.0.7444.163)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.38.0', revision: '6b412e825c*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5ac49e4054a970353473d025b46c65c6, findElement {value=//div[@class='login-form-blk login-blk']//p[contains(text(),'Enter the registered mobile no. with school')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.163, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\Guncha\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62417}, goog:processID: 11592, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62417/devtoo..., se:cdpVersion: 142.0.7444.163, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5ac49e4054a970353473d025b46c65c6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='login-form-blk login-blk']//p[contains(text(),'Enter the registered mobile no. with school')]"}
-  (Session info: chrome=142.0.7444.163)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.38.0', revision: '6b412e825c*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5ac49e4054a970353473d025b46c65c6, findElement {value=//div[@class='login-form-blk login-blk']//p[contains(text(),'Enter the registered mobile no. with school')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.163, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\Guncha\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62417}, goog:processID: 11592, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62417/devtoo..., se:cdpVersion: 142.0.7444.163, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5ac49e4054a970353473d025b46c65c6
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.getText(Unknown Source)
-at Entab.ERP.Pages.LoginPage.verifyLoginPage(LoginPage.java:39)
-at Entab.ERP.Tests.LoginVerification.verifyLogin(LoginVerification.java:14)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="verifyLogin()[pri:0, instance:Entab.ERP.Tests.LoginVerification@4d1c005e]" started-at="2025-11-20T14:24:03 IST" name="verifyLogin" finished-at="2025-11-20T14:24:10 IST" duration-ms="7347" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:Entab.ERP.Tests.LoginVerification@4d1c005e]" started-at="2025-11-19T17:56:37 IST" name="logOut" finished-at="2025-11-19T17:56:47 IST" duration-ms="10033" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//span[@id='teacherName']"}
-  (Session info: chrome=142.0.7444.163)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.38.0', revision: '6b412e825c*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5ac49e4054a970353473d025b46c65c6, findElement {value=//span[@id='teacherName'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.163, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\Guncha\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62417}, goog:processID: 11592, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62417/devtoo..., se:cdpVersion: 142.0.7444.163, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5ac49e4054a970353473d025b46c65c6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@id='teacherName']"}
-  (Session info: chrome=142.0.7444.163)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.38.0', revision: '6b412e825c*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5ac49e4054a970353473d025b46c65c6, findElement {value=//span[@id='teacherName'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.163, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\Guncha\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62417}, goog:processID: 11592, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62417/devtoo..., se:cdpVersion: 142.0.7444.163, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5ac49e4054a970353473d025b46c65c6
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-at Entab.ERP.Pages.HomePage.logOut(HomePage.java:37)
-at Entab.ERP.TestComponents.BaseTest.logOut(BaseTest.java:72)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:229)
-at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:215)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:131)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method is-config="true" signature="logOut()[pri:0, instance:Entab.ERP.Tests.LoginVerification@4d1c005e]" started-at="2025-11-20T14:24:10 IST" name="logOut" finished-at="2025-11-20T14:24:11 IST" duration-ms="410" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Entab.ERP.Tests.LoginVerification@4d1c005e]" started-at="2025-11-19T17:57:13 IST" name="tearDown" finished-at="2025-11-19T17:57:13 IST" duration-ms="254" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Entab.ERP.Tests.LoginVerification@4d1c005e]" started-at="2025-11-20T14:24:42 IST" name="tearDown" finished-at="2025-11-20T14:24:42 IST" duration-ms="25" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Entab.ERP.Tests.LoginVerification -->
       <class name="Entab.ERP.Tests.HomePageVerification">
-        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Entab.ERP.Tests.HomePageVerification@7c37508a]" started-at="2025-11-19T17:56:47 IST" name="lauchApplication" finished-at="2025-11-19T17:56:52 IST" duration-ms="4576" status="PASS">
+        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Entab.ERP.Tests.HomePageVerification@7c37508a]" started-at="2025-11-20T14:24:11 IST" name="lauchApplication" finished-at="2025-11-20T14:24:20 IST" duration-ms="9838" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchApplication -->
-        <test-method signature="verifyLoginUserName()[pri:1, instance:Entab.ERP.Tests.HomePageVerification@7c37508a]" started-at="2025-11-19T17:56:52 IST" name="verifyLoginUserName" finished-at="2025-11-19T17:56:59 IST" duration-ms="7364" status="PASS">
+        <test-method signature="verifyLoginUserName()[pri:1, instance:Entab.ERP.Tests.HomePageVerification@7c37508a]" started-at="2025-11-20T14:24:20 IST" name="verifyLoginUserName" finished-at="2025-11-20T14:24:28 IST" duration-ms="7352" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginUserName -->
-        <test-method signature="verifyProfile()[pri:2, instance:Entab.ERP.Tests.HomePageVerification@7c37508a]" started-at="2025-11-19T17:56:59 IST" name="verifyProfile" finished-at="2025-11-19T17:56:59 IST" duration-ms="138" status="PASS">
+        <test-method signature="verifyProfile()[pri:2, instance:Entab.ERP.Tests.HomePageVerification@7c37508a]" started-at="2025-11-20T14:24:28 IST" name="verifyProfile" finished-at="2025-11-20T14:24:28 IST" duration-ms="136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyProfile -->
-        <test-method signature="verifyChangePasswordText()[pri:3, instance:Entab.ERP.Tests.HomePageVerification@7c37508a]" started-at="2025-11-19T17:56:59 IST" name="verifyChangePasswordText" finished-at="2025-11-19T17:57:07 IST" duration-ms="7462" status="PASS">
+        <test-method signature="verifyChangePasswordText()[pri:3, instance:Entab.ERP.Tests.HomePageVerification@7c37508a]" started-at="2025-11-20T14:24:28 IST" name="verifyChangePasswordText" finished-at="2025-11-20T14:24:35 IST" duration-ms="7527" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyChangePasswordText -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:Entab.ERP.Tests.HomePageVerification@7c37508a]" started-at="2025-11-19T17:57:07 IST" name="logOut" finished-at="2025-11-19T17:57:13 IST" duration-ms="6090" status="PASS">
+        <test-method is-config="true" signature="logOut()[pri:0, instance:Entab.ERP.Tests.HomePageVerification@7c37508a]" started-at="2025-11-20T14:24:35 IST" name="logOut" finished-at="2025-11-20T14:24:41 IST" duration-ms="5763" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->

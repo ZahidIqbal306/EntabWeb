@@ -1,4 +1,5 @@
 package Entab.ERP.Pages;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -96,6 +97,29 @@ public class HomePage extends CommonComponents {
 			System.out.println(cpText);
 			return cpText;
 		}
+	}
+	
+	
+	@FindBy(xpath ="//img[@class='selectMenuTab']")
+	WebElement selectMenu;
+	
+	@FindBy(xpath ="//a[@class='lg-dropdown-menu menu-title mainmenulst']")
+	WebElement mainmenulst;
+	
+	@FindBy(xpath ="(//a[contains(text(),'Inventory')])[1]")
+	WebElement inventoryModule;
+	
+	
+	
+	// Open the Inventory Module
+	public void selectInventoryModule() throws InterruptedException
+	{
+		selectMenu.click();	
+		threadSleep(2000);
+		mainmenulst.click();
+		visibilityOfWebElement(inventoryModule);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", inventoryModule);
+		inventoryModule.click();		
 	}
 	
 }

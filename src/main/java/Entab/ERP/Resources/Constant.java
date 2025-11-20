@@ -16,6 +16,9 @@ public class Constant {
 	static Map<String,String> verifyProfile=new LinkedHashMap<String, String>();
 	static Map<String,String> verifyChangePasswordText=new LinkedHashMap<String, String>();
 
+	// Verify Location Master Page
+	static Map<String,String> verifyLocationMasterPage=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyAddLocationMandatoryField=new LinkedHashMap<String, String>();
 
 //======================2nd Part=================================================================
 
@@ -49,6 +52,22 @@ public class Constant {
 		verifyChangePasswordText.put("Step 3 : ","Verify the Change Password Submenu.");
 		verifyChangePasswordText.put("Step 4 : ","Change Password Submenu is showing.");
 		
+   // --------------- Location Master Page --------------------------------------------------------
+
+		//Verify Location Master Page
+		verifyLocationMasterPage.put("Step 1 : ","Login with Valid Credential.");
+		verifyLocationMasterPage.put("Step 2 : ","Click on the Menu Button.");
+		verifyLocationMasterPage.put("Step 3 : ","Go to the Inventory Module.");
+		verifyLocationMasterPage.put("Step 4 : ","Open the Location Master page - Setting > Location Master Page.");
+		verifyLocationMasterPage.put("Step 5 : ","Location Master page is opened successfully.");
+		
+		//Verify Add Location Mandatory Fields
+		verifyAddLocationMandatoryField.put("Step 1 : ","Login with Valid Credential.");
+		verifyAddLocationMandatoryField.put("Step 2 : ","Open the Inventory > Location Master Page");
+		verifyAddLocationMandatoryField.put("Step 3 : ","Click on the add new Location button.");
+		verifyAddLocationMandatoryField.put("Step 4 : ","Verify the mandatory field.");
+		verifyAddLocationMandatoryField.put("Step 5 : ","Company and Location mandatory fields are highlighted with red color border.");
+		
 
 	}
 	
@@ -76,6 +95,16 @@ public class Constant {
 			else if(key.equalsIgnoreCase("verifyChangePasswordText"))
 			{
 				return verifyChangePasswordText;
+			}
+	
+	// ------------------------------ Location Master Page -------------------------------------------------------			
+			else if(key.equalsIgnoreCase("verifyLocationMasterPage"))
+			{
+				return verifyLocationMasterPage;
+			}
+			else if(key.equalsIgnoreCase("verifyAddLocationMandatoryField"))
+			{
+				return verifyAddLocationMandatoryField;
 			}
 			
 		return defaultFun;

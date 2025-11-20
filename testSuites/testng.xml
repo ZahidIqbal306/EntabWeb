@@ -8,10 +8,8 @@
 	
 	<test name="Login Page Test">
 		<classes>
-			<class name="Entab.ERP.Tests.LoginVerification" />	
-			<class name="Entab.ERP.Tests.HomePageVerification" />			
+			<class name="Entab.ERP.Tests.LocationMasterPageVerifcation" />	
 		</classes>
-	</test>
-	
+	</test>	
 
 </suite>
