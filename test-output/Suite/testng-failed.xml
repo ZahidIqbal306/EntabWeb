@@ -11,7 +11,8 @@
           <include name="logOut"/>
           <include name="tearDown"/>
           <include name="lauchApplication"/>
-          <include name="verifyLocationMasterPage"/>
+          <include name="activeLocationVerfication"/>
+          <include name="deactivateLocationVerfication"/>
         </methods>
       </class> <!-- Entab.ERP.Tests.LocationMasterPageVerifcation -->
     </classes>

@@ -5,6 +5,7 @@ import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -80,5 +81,21 @@ public class CommonComponents
 		a.selectByValue(value);		
 	}
 	
-
+	// Window Scroll
+	public void windowScroll(int no)
+	{
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,'"+no+"')");
+	}
+	
+	// incremental value
+    public static int count = 1;
+	public String incrementValue(String value)
+	{
+		
+		String newValue = value + count;
+		count++;
+		return newValue;		
+	}	
+	
 }

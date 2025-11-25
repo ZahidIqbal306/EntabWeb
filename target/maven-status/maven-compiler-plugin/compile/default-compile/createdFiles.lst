@@ -1,5 +1,7 @@
 Entab\ERP\Pages\HomePage.class
 Entab\ERP\Resources\Constant.class
+Entab\ERP\Pages\InventoryMenu.class
+Entab\ERP\Pages\LocationMaster.class
 Entab\ERP\Resources\ExtentReporterNG.class
 Entab\ERP\Pages\LoginPage.class
 Entab\ERP\CommonComponents\CommonComponents.class

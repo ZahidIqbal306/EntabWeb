@@ -8,8 +8,8 @@
           <include name="logOut"/>
           <include name="tearDown"/>
           <include name="lauchApplication"/>
-          <include name="verifyLocationMasterPage"/>
-          <include name="verifyAddLocationMandatoryField"/>
+          <include name="deactivateLocationVerfication"/>
+          <include name="activateLocationVerfication"/>
         </methods>
       </class> <!-- Entab.ERP.Tests.LocationMasterPageVerifcation -->
     </classes>

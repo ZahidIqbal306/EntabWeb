@@ -35,6 +35,7 @@ public class HomePage extends CommonComponents {
 	{
 		if(invisibilityOfWebElement(logout)==true)
 		{
+			threadSleep(6000);
 			userProfile.click();
 			visibilityOfWebElement(logout);
 			logout.click();

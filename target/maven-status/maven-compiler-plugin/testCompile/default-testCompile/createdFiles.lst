@@ -1,4 +1,5 @@
 Entab\ERP\TestComponents\BaseTest.class
 Entab\ERP\TestComponents\Listeners.class
 Entab\ERP\Tests\HomePageVerification.class
+Entab\ERP\Tests\LocationMasterPageVerifcation.class
 Entab\ERP\Tests\LoginVerification.class
