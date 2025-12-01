@@ -7,7 +7,7 @@ import Entab.ERP.Pages.InventoryMenu;
 import Entab.ERP.Pages.LocationMaster;
 import Entab.ERP.TestComponents.BaseTest;
 
-public class LocationMasterPageVerifcation extends BaseTest {
+public class VerifyLocationMasterPage extends BaseTest {
 	
 	@Test (priority=1)
 	public void verifyLocationMasterPage() throws IOException, InterruptedException
@@ -22,7 +22,7 @@ public class LocationMasterPageVerifcation extends BaseTest {
 		Assert.assertEquals(text, "Location Master");
 	}
 	
-	@Test(priority=2, enabled = false)
+	@Test(priority=2, enabled = true)
 	public void verifyAddLocationMandatoryField() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -38,8 +38,8 @@ public class LocationMasterPageVerifcation extends BaseTest {
 		Assert.assertTrue(companyBorderColor, "Company mandatory filed is not highlighted.");		
 	}
 	
-	@Test(priority=3, enabled = false)
-	public void addNewLocationVerification() throws InterruptedException
+	@Test(priority=3, enabled = true)
+	public void verifyAddNewLocationion() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
 	    String addedToast = lm.addNewLocation("Automation M");	
@@ -47,8 +47,8 @@ public class LocationMasterPageVerifcation extends BaseTest {
 	    Assert.assertEquals(flag, true);
 	}
 	
-	@Test(priority=4, enabled = false)
-	public void updateLocationPageVeification() throws InterruptedException
+	@Test(priority=4, enabled = true)
+	public void verifyUpdateLocationPage() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
 		String headertext = lm.updateLocationPage();
@@ -56,8 +56,8 @@ public class LocationMasterPageVerifcation extends BaseTest {
 		Assert.assertEquals(flag, true);		
 	}
 	
-	@Test(priority=5, enabled = false)
-	public void updateLocationVerfication() throws InterruptedException
+	@Test(priority=5, enabled = true)
+	public void verifyUpdateLocation() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
 		String updatePagetext = lm.updateLocation();
@@ -65,8 +65,8 @@ public class LocationMasterPageVerifcation extends BaseTest {
 		Assert.assertEquals(flag, true);		
 	}
 	
-	@Test(priority=6, enabled = false)
-	public void duplicateLocationVerification() throws InterruptedException
+	@Test(priority=6, enabled = true)
+	public void verifyDuplicateLocationName() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
 	    String existToast = lm.addDuplicateLocation();
@@ -74,8 +74,8 @@ public class LocationMasterPageVerifcation extends BaseTest {
 	    Assert.assertEquals(flag, true);
 	}
 	
-	@Test(priority=7, enabled = false)
-	public void deleteLocationVerification() throws InterruptedException
+	@Test(priority=7, enabled = true)
+	public void verifyDeleteLocation() throws InterruptedException
 	{		
 		LocationMaster lm = new LocationMaster(driver);
 		String deletedText = lm.deleteLocation();
@@ -83,8 +83,8 @@ public class LocationMasterPageVerifcation extends BaseTest {
 	    Assert.assertEquals(flag, true);
 	}
 	
-	@Test(priority=8, enabled = false)
-	public void deteteUsedLocation() throws InterruptedException
+	@Test(priority=8, enabled = true)
+	public void verifyDetetedUsedLocation() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
 		String alertText = lm.deleteUsedLocation("Biological Lab Equipment");
@@ -93,7 +93,7 @@ public class LocationMasterPageVerifcation extends BaseTest {
 	}
 	
 	@Test(priority=9)
-	public void deactivateLocationVerfication() throws InterruptedException
+	public void verifyDeactivateLocation() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
 		String status = lm.activeDeactiveStatus();
@@ -111,7 +111,7 @@ public class LocationMasterPageVerifcation extends BaseTest {
 	}	
 	
 	@Test(priority=10)
-	public void activateLocationVerfication() throws InterruptedException
+	public void verifyActivateLocation() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
 		String status = lm.activeDeactiveStatus();
@@ -125,7 +125,7 @@ public class LocationMasterPageVerifcation extends BaseTest {
 		}
 		
 		Assert.assertEquals(flag, true);
-		System.out.println("Location is aeactivated successfully.");
+		System.out.println("Location is activated successfully.");
 	}
 
 
