@@ -13,7 +13,7 @@ public class Constant {
 	
 	// Verify Home Page
 	static Map<String,String> verifyLoginUserName=new LinkedHashMap<String, String>();
-	static Map<String,String> verifyProfile=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyUserId=new LinkedHashMap<String, String>();
 	static Map<String,String> verifyChangePasswordText=new LinkedHashMap<String, String>();
 
 	// Verify Location Master Page
@@ -52,10 +52,9 @@ public class Constant {
 		verifyLoginUserName.put("Step 3 : ","Username is showing correctly.");
 	
 		//Verify Profile Menu
-		verifyProfile.put("Step 1 : ","Login with Valid Credential.");
-		verifyProfile.put("Step 2 : ","Click on the Employee Name.");
-		verifyProfile.put("Step 3 : ","Verify the Profile Submenu.");
-		verifyProfile.put("Step 4 : ","Profile menu is showing.");
+		verifyUserId.put("Step 1 : ","Login with Valid Credential.");
+		verifyUserId.put("Step 2 : ","Verify the Login user Id.");
+		verifyUserId.put("Step 3 : ","User Id is showing correctly.");
 		
 		//Verify Login User Name
 		verifyChangePasswordText.put("Step 1 : ","Login with Valid Credential.");
@@ -152,9 +151,9 @@ public class Constant {
 			{
 				return verifyLoginUserName;
 			}
-			else if(key.equalsIgnoreCase("verifyProfile"))
+			else if(key.equalsIgnoreCase("verifyUserId"))
 			{
-				return verifyProfile;
+				return verifyUserId;
 			}
 			else if(key.equalsIgnoreCase("verifyChangePasswordText"))
 			{

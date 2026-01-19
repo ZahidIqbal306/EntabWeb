@@ -6,6 +6,7 @@ import Entab.ERP.Pages.HomePage;
 import Entab.ERP.Pages.InventoryMenu;
 import Entab.ERP.Pages.LocationMaster;
 import Entab.ERP.TestComponents.BaseTest;
+import Entab.ERP.TestComponents.Retry;
 
 public class VerifyLocationMasterPage extends BaseTest {
 	
@@ -92,7 +93,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 	    Assert.assertEquals(flag, true);
 	}
 	
-	@Test(priority=9)
+	@Test(priority=9,retryAnalyzer = Retry.class)
 	public void verifyDeactivateLocation() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -110,7 +111,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 		System.out.println("Location is deactivated successfully.");
 	}	
 	
-	@Test(priority=10)
+	@Test(priority=10,retryAnalyzer = Retry.class)
 	public void verifyActivateLocation() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);

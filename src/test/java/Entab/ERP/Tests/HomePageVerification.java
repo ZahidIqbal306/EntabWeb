@@ -11,6 +11,7 @@ import Entab.ERP.TestComponents.BaseTest;
 public class HomePageVerification extends BaseTest
 {
 	String name = "ZAHID IQBAL";
+	String userId = "8287218191";
 
 	@Test (priority=1)
 	public void verifyLoginUserName() throws IOException, InterruptedException
@@ -21,12 +22,13 @@ public class HomePageVerification extends BaseTest
 		Assert.assertEquals(actualName, name);
 	}
 	
+	// verifyProfile
 	@Test(priority=2)
-	public void verifyProfile() throws IOException, InterruptedException
+	public void verifyUserId() throws IOException, InterruptedException
 	{
 		HomePage homePage = new HomePage(driver);
-		String actualName = homePage.profileText();
-		Assert.assertEquals(actualName, "Profile");
+		String actualName = homePage.loginUserId();
+		Assert.assertEquals(actualName, "8287218191");
 	}
 	
 	@Test(priority=3)

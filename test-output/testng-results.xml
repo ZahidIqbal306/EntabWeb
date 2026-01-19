@@ -1,65 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-01T11:19:05 IST" name="Default suite" finished-at="2025-12-01T11:20:35 IST" duration-ms="89828">
+  <suite started-at="2026-01-19T17:47:42 IST" name="Default suite" finished-at="2026-01-19T17:48:25 IST" duration-ms="42940">
     <groups>
     </groups>
-    <test started-at="2025-12-01T11:19:05 IST" name="Default test" finished-at="2025-12-01T11:20:35 IST" duration-ms="89828">
-      <class name="Entab.ERP.Tests.VerifyLocationMasterPage">
-        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Entab.ERP.Tests.VerifyLocationMasterPage@5d0bf09b]" started-at="2025-12-01T11:19:05 IST" name="lauchApplication" finished-at="2025-12-01T11:19:15 IST" duration-ms="10569" status="PASS">
+    <test started-at="2026-01-19T17:47:42 IST" name="Default test" finished-at="2026-01-19T17:48:25 IST" duration-ms="42940">
+      <class name="Entab.ERP.Tests.HomePageVerification">
+        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Entab.ERP.Tests.HomePageVerification@639c2c1d]" started-at="2026-01-19T17:47:42 IST" name="lauchApplication" finished-at="2026-01-19T17:47:52 IST" duration-ms="10465" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchApplication -->
-        <test-method signature="verifyLocationMasterPage()[pri:1, instance:Entab.ERP.Tests.VerifyLocationMasterPage@5d0bf09b]" started-at="2025-12-01T11:19:16 IST" name="verifyLocationMasterPage" finished-at="2025-12-01T11:19:26 IST" duration-ms="10206" status="PASS">
+        <test-method signature="verifyLoginUserName()[pri:1, instance:Entab.ERP.Tests.HomePageVerification@639c2c1d]" started-at="2026-01-19T17:47:52 IST" name="verifyLoginUserName" finished-at="2026-01-19T17:48:06 IST" duration-ms="13446" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLocationMasterPage -->
-        <test-method signature="verifyAddLocationMandatoryField()[pri:2, instance:Entab.ERP.Tests.VerifyLocationMasterPage@5d0bf09b]" started-at="2025-12-01T11:19:26 IST" name="verifyAddLocationMandatoryField" finished-at="2025-12-01T11:19:30 IST" duration-ms="4219" status="PASS">
+        </test-method> <!-- verifyLoginUserName -->
+        <test-method signature="verifyUserId()[pri:2, instance:Entab.ERP.Tests.HomePageVerification@639c2c1d]" started-at="2026-01-19T17:48:06 IST" name="verifyUserId" finished-at="2026-01-19T17:48:11 IST" duration-ms="5563" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddLocationMandatoryField -->
-        <test-method signature="verifyAddNewLocationion()[pri:3, instance:Entab.ERP.Tests.VerifyLocationMasterPage@5d0bf09b]" started-at="2025-12-01T11:19:30 IST" name="verifyAddNewLocationion" finished-at="2025-12-01T11:19:38 IST" duration-ms="7728" status="PASS">
+        </test-method> <!-- verifyUserId -->
+        <test-method signature="verifyChangePasswordText()[pri:3, instance:Entab.ERP.Tests.HomePageVerification@639c2c1d]" started-at="2026-01-19T17:48:11 IST" name="verifyChangePasswordText" finished-at="2026-01-19T17:48:19 IST" duration-ms="7578" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddNewLocationion -->
-        <test-method signature="verifyUpdateLocationPage()[pri:4, instance:Entab.ERP.Tests.VerifyLocationMasterPage@5d0bf09b]" started-at="2025-12-01T11:19:38 IST" name="verifyUpdateLocationPage" finished-at="2025-12-01T11:19:46 IST" duration-ms="8658" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUpdateLocationPage -->
-        <test-method signature="verifyUpdateLocation()[pri:5, instance:Entab.ERP.Tests.VerifyLocationMasterPage@5d0bf09b]" started-at="2025-12-01T11:19:46 IST" name="verifyUpdateLocation" finished-at="2025-12-01T11:19:52 IST" duration-ms="6082" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUpdateLocation -->
-        <test-method signature="verifyDuplicateLocationName()[pri:6, instance:Entab.ERP.Tests.VerifyLocationMasterPage@5d0bf09b]" started-at="2025-12-01T11:19:52 IST" name="verifyDuplicateLocationName" finished-at="2025-12-01T11:20:00 IST" duration-ms="7558" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDuplicateLocationName -->
-        <test-method signature="verifyDeleteLocation()[pri:7, instance:Entab.ERP.Tests.VerifyLocationMasterPage@5d0bf09b]" started-at="2025-12-01T11:20:00 IST" name="verifyDeleteLocation" finished-at="2025-12-01T11:20:06 IST" duration-ms="5870" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDeleteLocation -->
-        <test-method signature="verifyDetetedUsedLocation()[pri:8, instance:Entab.ERP.Tests.VerifyLocationMasterPage@5d0bf09b]" started-at="2025-12-01T11:20:06 IST" name="verifyDetetedUsedLocation" finished-at="2025-12-01T11:20:17 IST" duration-ms="10752" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDetetedUsedLocation -->
-        <test-method signature="verifyDeactivateLocation()[pri:9, instance:Entab.ERP.Tests.VerifyLocationMasterPage@5d0bf09b]" started-at="2025-12-01T11:20:17 IST" name="verifyDeactivateLocation" finished-at="2025-12-01T11:20:23 IST" duration-ms="6076" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDeactivateLocation -->
-        <test-method signature="verifyActivateLocation()[pri:10, instance:Entab.ERP.Tests.VerifyLocationMasterPage@5d0bf09b]" started-at="2025-12-01T11:20:23 IST" name="verifyActivateLocation" finished-at="2025-12-01T11:20:28 IST" duration-ms="5552" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyActivateLocation -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:Entab.ERP.Tests.VerifyLocationMasterPage@5d0bf09b]" started-at="2025-12-01T11:20:28 IST" name="logOut" finished-at="2025-12-01T11:20:35 IST" duration-ms="6504" status="PASS">
+        </test-method> <!-- verifyChangePasswordText -->
+        <test-method is-config="true" signature="logOut()[pri:0, instance:Entab.ERP.Tests.HomePageVerification@639c2c1d]" started-at="2026-01-19T17:48:19 IST" name="logOut" finished-at="2026-01-19T17:48:25 IST" duration-ms="5849" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Entab.ERP.Tests.VerifyLocationMasterPage@5d0bf09b]" started-at="2025-12-01T11:20:35 IST" name="tearDown" finished-at="2025-12-01T11:20:35 IST" duration-ms="105" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Entab.ERP.Tests.HomePageVerification@639c2c1d]" started-at="2026-01-19T17:48:25 IST" name="tearDown" finished-at="2026-01-19T17:48:25 IST" duration-ms="86" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Entab.ERP.Tests.VerifyLocationMasterPage -->
+      </class> <!-- Entab.ERP.Tests.HomePageVerification -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

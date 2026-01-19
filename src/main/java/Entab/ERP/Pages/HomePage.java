@@ -1,4 +1,6 @@
 package Entab.ERP.Pages;
+import java.util.List;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,17 +19,61 @@ public class HomePage extends CommonComponents {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath = "//span[@id='teacherName']")
-	WebElement userProfile;
+	@FindBy(xpath = "(//img[@class='profileImg'])[1]")
+	WebElement imageIcon;
+	
+	@FindBy(xpath = "(//li[@class='profile_li']/p)[1]")
+	WebElement profileUserId;
+	
+	public String loginUserId() throws InterruptedException
+	{
+		String Id = "";
+		if(invisibilityOfWebElement(profileUserId)==true)
+		{
+			threadSleep(6000);
+			imageIcon.click();
+			visibilityOfWebElement(profileUserId);
+			String profileId = profileUserId.getText();
+			String[] userName = profileId.split(":");
+			Id = userName[1].trim();
+		}
+		else
+		{
+			String profileId = profileUserId.getText();
+			String[] userName = profileId.split(":");
+			Id = userName[1].trim();
+		}
+		
+		System.out.println("UserId is : "+Id);
+		return Id;
+	}
+	
+	@FindBy(xpath = "(//li[@class='profile_li']/p)[2]")
+	WebElement profileUserName;
 	
 	public String loginUserName() throws InterruptedException
 	{
-		visibilityOfWebElement(userProfile);
-		String userName = userProfile.getText();
-		System.out.println("Login username is : "+userName);
-		return userName;
+		String name = "";
+		if(invisibilityOfWebElement(profileUserName)==true)
+		{
+			threadSleep(6000);
+			imageIcon.click();
+			visibilityOfWebElement(profileUserName);
+			String profileList = profileUserName.getText();
+			String[] userName = profileList.split(":");
+			name = userName[1].trim();
+		}
+		else
+		{
+			String profileList = profileUserName.getText();
+			String[] userName = profileList.split(":");
+			name = userName[1].trim();
+		}
+		
+		System.out.println("Username is : "+name);
+		return name;
 	}
-	
+
 	@FindBy(xpath = "//a[@class='logout']")
 	WebElement logout;
 	
@@ -36,7 +82,7 @@ public class HomePage extends CommonComponents {
 		if(invisibilityOfWebElement(logout)==true)
 		{
 			threadSleep(6000);
-			userProfile.click();
+			imageIcon.click();
 			visibilityOfWebElement(logout);
 			logout.click();
 			System.out.println("User is logged out successfully.");
@@ -45,7 +91,6 @@ public class HomePage extends CommonComponents {
 		}
 		else
 		{
-			visibilityOfWebElement(logout);
 			logout.click();
 			System.out.println("User is logged out successfully.");
 			driver.close();
@@ -53,28 +98,6 @@ public class HomePage extends CommonComponents {
 		}
 	}
 	
-	@FindBy(xpath = "//a[@class='profile']")
-	WebElement profile;
-	
-	public String profileText()
-	{
-		//hoverText(driver,userProfile);
-		if(invisibilityOfWebElement(logout)==true)
-		{
-			userProfile.click();
-			visibilityOfWebElement(profile);
-			String prText = profile.getText();
-			System.out.println(prText);
-			return prText;
-		}
-		else
-		{
-			visibilityOfWebElement(profile);
-			String prText = profile.getText();
-			System.out.println(prText);
-			return prText;
-		}
-	}
 	
 	@FindBy(xpath = "//a[contains(., 'Change Password')]")
 	WebElement passText;
@@ -83,9 +106,9 @@ public class HomePage extends CommonComponents {
 	{
 		threadSleep(2000);
 		//hoverText(driver,userProfile);
-		if(invisibilityOfWebElement(logout)==true)
+		if(invisibilityOfWebElement(passText)==true)
 		{
-			userProfile.click();
+			imageIcon.click();
 			visibilityOfWebElement(passText);
 			String cpText = passText.getText();
 			System.out.println(cpText);

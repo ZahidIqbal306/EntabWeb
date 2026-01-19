@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Entab.ERP.Tests.LocationMasterPageVerifcation">
+      <class name="Entab.ERP.Tests.HomePageVerification">
         <methods>
           <include name="logOut"/>
           <include name="tearDown"/>
           <include name="lauchApplication"/>
-          <include name="deactivateLocationVerfication"/>
-          <include name="activateLocationVerfication"/>
+          <include name="verifyUserId"/>
         </methods>
-      </class> <!-- Entab.ERP.Tests.LocationMasterPageVerifcation -->
+      </class> <!-- Entab.ERP.Tests.HomePageVerification -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
