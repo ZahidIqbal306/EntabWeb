@@ -15,7 +15,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 	{
 		loginPage.loginApplication();
 		HomePage homePage = new HomePage(driver);
-		homePage.selectInventoryModule();
+		homePage.selectModuleName("Inventory");
 		InventoryMenu im = new InventoryMenu(driver);
 		im.clickInventorySetting();
 		LocationMaster lm = new LocationMaster(driver);

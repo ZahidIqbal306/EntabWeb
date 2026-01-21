@@ -124,26 +124,36 @@ public class HomePage extends CommonComponents {
 	}
 	
 	
-	@FindBy(xpath ="//img[@class='selectMenuTab']")
+	@FindBy(xpath ="//li[@class='selectMenuTab selectCampus barcolor']")
 	WebElement selectMenu;
 	
-	@FindBy(xpath ="//a[@class='lg-dropdown-menu menu-title mainmenulst']")
-	WebElement mainmenulst;
+	@FindBy(xpath ="//span[@class='mainmenu1']")
+	List<WebElement> menuList;
 	
-	@FindBy(xpath ="(//a[contains(text(),'Inventory')])[1]")
+	@FindBy(xpath ="//label[contains(text(),'Inventory')]")
 	WebElement inventoryModule;
-	
-	
-	
+		
 	// Open the Inventory Module
-	public void selectInventoryModule() throws InterruptedException
+	public void selectModuleName(String module) throws InterruptedException
 	{
+		//String module = "Inventory";
 		selectMenu.click();	
 		threadSleep(2000);
-		mainmenulst.click();
-		visibilityOfWebElement(inventoryModule);
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", inventoryModule);
-		inventoryModule.click();		
+		for(int i=0; i<menuList.size();i++)
+		{
+			String menuName = menuList.get(i).getText();
+			if(menuName.equals(module))
+			{
+				menuList.get(i).click();
+				System.out.println("Opne Module Name is : " +menuName);
+				break;
+			}
+		}
+		
+		
+//		visibilityOfWebElement(inventoryModule);
+//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", inventoryModule);
+//		inventoryModule.click();		
 	}
 	
 }

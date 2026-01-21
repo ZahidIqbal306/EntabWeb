@@ -16,7 +16,7 @@ public class InventoryMenu extends CommonComponents {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath= "//a[contains(text(),'Inventory Setting')]")
+	@FindBy(xpath= "//span[contains(text(),'Inventory Setting')]")
 	WebElement inventorySetting;
 	
 	public void clickInventorySetting()
@@ -25,7 +25,9 @@ public class InventoryMenu extends CommonComponents {
 		inventorySetting.click();
 	}
 	
-	@FindBy(xpath= "//li[@class='active']//a[text()='Entry']")
+	//span[contains(text(),'Entry')]  
+	
+	@FindBy(xpath= "//li[@class='active']//span[text()='Entry ']")
 	WebElement inventoryEntry;
 	
 	public void clickInventoryEntry()
@@ -34,7 +36,7 @@ public class InventoryMenu extends CommonComponents {
 		inventoryEntry.click();
 	}
 	
-	@FindBy(xpath= "//li[@class='active']//a[text()='Reports']")
+	@FindBy(xpath= "//li[@class='active']//ul[@class='lg-sub-menu1']//li//a[@class='lg-dropdown-menu2']//span[contains(text(),'Reports')]")
 	WebElement inventoryReports;
 	
 	public void clickInventoryReports()

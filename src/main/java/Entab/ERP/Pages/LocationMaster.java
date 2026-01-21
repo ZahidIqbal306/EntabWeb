@@ -21,7 +21,7 @@ public class LocationMaster extends CommonComponents
 	
 
 	// ---------- Verify Location Master Page --------------
-	@FindBy(xpath = "(//a[@href=\"/Inventory/LocationMaster\"])[1]")
+	@FindBy(xpath = "(//a[@href='/Inventory/LocationMaster'])[2]")
 	WebElement locationMasterSubMenu;
 	
 	@FindBy(xpath = "//a[@class='btn btn-header-link']")
@@ -37,7 +37,7 @@ public class LocationMaster extends CommonComponents
 	}
 	
 	// ---------- Verify Add Location Page --------------
-	@FindBy(xpath = "//a[@title='Add Location']")
+	@FindBy(xpath = "//button[@title='Add Location']")
 	WebElement addLocationButton;
 	
 	@FindBy(xpath = "//span[@id='headerName']")
@@ -137,7 +137,8 @@ public class LocationMaster extends CommonComponents
 	
 	public String addNewLocation(String locatioName) throws InterruptedException
 	{
-		threadSleep(3000);
+		threadSleep(2000);
+		String toastText;
 		addLocationButton.click();
 		addLocationName = incrementValue(locatioName);
 		locationName.sendKeys(addLocationName);
@@ -152,13 +153,14 @@ public class LocationMaster extends CommonComponents
 		address.sendKeys("This is a test record " +addLocationName);
 		saveButton.click();
 		visibilityOfWebElement(toast);
-		String toastText = toast.getText();
+		toastText = toast.getText();
+		
 		System.out.println("Add Location Toast Text is - :" +toastText);
 		return toastText;
 	}
 
 	// ---------- Verify Update Location Page --------------
-	@FindBy(xpath ="(//i[@title='Edit'])[1]")
+	@FindBy(xpath ="//i[@title='Edit']")
 	WebElement editLocation;
 	
 	@FindBy(xpath ="//span[@id='headerName']")
@@ -166,7 +168,7 @@ public class LocationMaster extends CommonComponents
 	
 	public String updateLocationPage() throws InterruptedException
 	{
-		threadSleep(5000);
+		threadSleep(3000);
 		editLocation.click();
 		threadSleep(3000);
 		String text = updateLocation.getText();
@@ -210,7 +212,7 @@ public class LocationMaster extends CommonComponents
 	}	
 	
 	// ---------- Verify Add Duplicate Location --------------
-	@FindBy(xpath="//label[@title='Close']")
+	@FindBy(xpath="//button[@title='Close']")
 	WebElement closeButton;
 	
 	public String addDuplicateLocation() throws InterruptedException
