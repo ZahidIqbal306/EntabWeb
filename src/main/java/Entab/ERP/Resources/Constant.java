@@ -27,6 +27,9 @@ public class Constant {
 	static Map<String,String> verifyDetetedUsedLocation=new LinkedHashMap<String, String>();
 	static Map<String,String> verifyDeactivateLocation=new LinkedHashMap<String, String>();
 	static Map<String,String> verifyActivateLocation=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyExportCSV=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyExportExcel=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyExportPDF=new LinkedHashMap<String, String>();
 
 
 
@@ -131,6 +134,24 @@ public class Constant {
 		verifyActivateLocation.put("Step 2 : ","Open the Inventory > Location Master Page");
 		verifyActivateLocation.put("Step 3 : ","Now Activate the deactive location.");
 		verifyActivateLocation.put("Step 4 : ","Location has been Activated successfully.");	
+		
+		//Verify Export CSV Functionality
+		verifyExportCSV.put("Step 1 : ","Login with Valid Credential.");
+		verifyExportCSV.put("Step 2 : ","Open the Inventory > Location Master Page");
+		verifyExportCSV.put("Step 3 : ","Now Click on the CSV button.");
+		verifyExportCSV.put("Step 4 : ","CSV file is downloaded successfully.");
+		
+		//Verify Export Excel Functionality
+		verifyExportExcel.put("Step 1 : ","Login with Valid Credential.");
+		verifyExportExcel.put("Step 2 : ","Open the Inventory > Location Master Page");
+		verifyExportExcel.put("Step 3 : ","Now Click on the export Excel button.");
+		verifyExportExcel.put("Step 4 : ","Excel file is downloaded successfully.");
+		
+		//Verify Export Print Functionality
+		verifyExportPDF.put("Step 1 : ","Login with Valid Credential.");
+		verifyExportPDF.put("Step 2 : ","Open the Inventory > Location Master Page");
+		verifyExportPDF.put("Step 3 : ","Now Click on the print button.");
+		verifyExportPDF.put("Step 4 : ","Pdf file is opened into the next tab.");
 	
 	}
 	
@@ -201,8 +222,19 @@ public class Constant {
 			{
 				return verifyActivateLocation;
 			}
+			else if(key.equalsIgnoreCase("verifyExportCSV"))
+			{
+				return verifyExportCSV;
+			}
+			else if(key.equalsIgnoreCase("verifyExportExcel"))
+			{
+				return verifyExportExcel;
+			}
+			else if(key.equalsIgnoreCase("verifyExportPDF"))
+			{
+				return verifyExportPDF;
+			}			
 			
 		return defaultFun;
 	}
-
 }

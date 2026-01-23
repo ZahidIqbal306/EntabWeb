@@ -23,7 +23,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 		Assert.assertEquals(text, "Location Master");
 	}
 	
-	@Test(priority=2, enabled = false)
+	@Test(priority=2, enabled = true)
 	public void verifyAddLocationMandatoryField() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -39,7 +39,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 		Assert.assertTrue(companyBorderColor, "Company mandatory filed is not highlighted.");		
 	}
 	
-	@Test(priority=3, enabled = false)
+	@Test(priority=3, enabled = true)
 	public void verifyAddNewLocationion() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -48,7 +48,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 	    Assert.assertEquals(flag, true);
 	}
 	
-	@Test(priority=4, enabled = false)
+	@Test(priority=4, enabled = true)
 	public void verifyUpdateLocationPage() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -57,7 +57,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 		Assert.assertEquals(flag, true);		
 	}
 	
-	@Test(priority=5, enabled = false)
+	@Test(priority=5, enabled = true)
 	public void verifyUpdateLocation() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -66,7 +66,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 		Assert.assertEquals(flag, true);		
 	}
 	
-	@Test(priority=6, enabled = false)
+	@Test(priority=6, enabled = true)
 	public void verifyDuplicateLocationName() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -75,7 +75,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 	    Assert.assertEquals(flag, true);
 	}
 	
-	@Test(priority=7, enabled = false)
+	@Test(priority=7, enabled = true)
 	public void verifyDeleteLocation() throws InterruptedException
 	{		
 		LocationMaster lm = new LocationMaster(driver);
@@ -84,7 +84,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 	    Assert.assertEquals(flag, true);
 	}
 	
-	@Test(priority=8, enabled = false)
+	@Test(priority=8, enabled = true)
 	public void verifyDetetedUsedLocation() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -93,7 +93,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 	    Assert.assertEquals(flag, true);
 	}
 	
-	@Test(priority=9,retryAnalyzer = Retry.class, enabled = false)
+	@Test(priority=9,retryAnalyzer = Retry.class, enabled = true)
 	public void verifyDeactivateLocation() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -111,7 +111,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 		System.out.println("Location is deactivated successfully.");
 	}	
 	
-	@Test(priority=10,retryAnalyzer = Retry.class, enabled = false)
+	@Test(priority=10,retryAnalyzer = Retry.class, enabled = true)
 	public void verifyActivateLocation() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -129,7 +129,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 		System.out.println("Location is activated successfully.");
 	}
 	
-	@Test(priority=2)
+	@Test(priority=11, enabled = true)
 	public void verifyExportCSV() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -138,7 +138,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 		System.out.println("CSV file is download successfully.");
 	}
 	
-	@Test(priority=3)
+	@Test(priority=12,enabled = true)
 	public void verifyExportExcel() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -147,7 +147,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 		System.out.println("Excel file is download successfully.");
 	}
 	
-	@Test(priority=4)
+	@Test(priority=13,enabled = true)
 	public void verifyExportPDF() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
