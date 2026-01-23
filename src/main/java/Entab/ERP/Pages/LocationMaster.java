@@ -1,7 +1,14 @@
 package Entab.ERP.Pages;
+import java.io.File;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -327,4 +334,83 @@ public class LocationMaster extends CommonComponents
 		driver.switchTo().alert().accept();
 		driver.navigate().refresh();
 	}
+	
+	// Export CSV ----------------------------------------------------------------------------------
+	
+	@FindBy(xpath ="//button[@title='CSV']")
+	WebElement exportCSV;	
+	
+	public boolean exportCSV() throws InterruptedException {
+
+        exportCSV.click();
+
+        String downloadPath = "C:\\Users\\Guncha\\Downloads";
+        File file = new File(downloadPath + "\\Location Master_2026-01-21.csv");
+
+        int waitTime = 0;
+        while (waitTime < 20) 
+        {
+            if (file.exists()) 
+            {
+                return true;
+            }
+            Thread.sleep(1000);
+            waitTime++;
+        }
+        return false;
+    }
+	
+	// Export Excel ----------------------------------------------------------------------------------
+	
+		@FindBy(xpath ="//button[@title='Excel']")
+		WebElement exportExcel;	
+		
+		public boolean exportExcel() throws InterruptedException {
+
+			exportExcel.click();
+
+	        String downloadPath = "C:\\Users\\Guncha\\Downloads";
+	        File file = new File(downloadPath + "\\Location Master_2026-01-21.xlsx");
+
+	        int waitTime = 0;
+	        while (waitTime < 20) 
+	        {
+	            if (file.exists()) 
+	            {
+	                return true;
+	            }
+	            Thread.sleep(1000);
+	            waitTime++;
+	        }
+	        return false;
+	    }
+		
+	// Export PDF ----------------------------------------------------------------------------------
+		
+	@FindBy(xpath ="//button[@class='dt-button buttons-print']")
+	WebElement exportPDF;	
+		
+		public boolean exportPDF() throws InterruptedException {
+
+			exportPDF.click();
+			Thread.sleep(3000);
+			Set<String> windows = driver.getWindowHandles();
+			Iterator<String> itr = windows.iterator();
+			int count = windows.size();
+			System.out.println("Window size is : "+count);
+	        while (count > 1) 
+	        {
+	        	String parent = itr.next();
+	 	        String child = itr.next();
+	 	        driver.switchTo().window(child);
+	 	        driver.close();
+	 	        driver.switchTo().window(parent);
+	 	        driver.switchTo().defaultContent();
+	            return true;
+	           
+	        }
+	       
+	        return false;
+	    }	
+		
 }

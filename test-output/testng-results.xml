@@ -1,65 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-21T15:57:44 IST" name="Suite" finished-at="2026-01-21T15:59:13 IST" duration-ms="88446">
+  <suite started-at="2026-01-21T18:06:46 IST" name="Default suite" finished-at="2026-01-21T18:10:14 IST" duration-ms="207946">
     <groups>
     </groups>
-    <test started-at="2026-01-21T15:57:44 IST" name="Login Page Test" finished-at="2026-01-21T15:59:13 IST" duration-ms="88446">
+    <test started-at="2026-01-21T18:06:46 IST" name="Default test" finished-at="2026-01-21T18:10:14 IST" duration-ms="207946">
       <class name="Entab.ERP.Tests.VerifyLocationMasterPage">
-        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Entab.ERP.Tests.VerifyLocationMasterPage@24c1b2d2]" started-at="2026-01-21T15:57:44 IST" name="lauchApplication" finished-at="2026-01-21T15:57:55 IST" duration-ms="10584" status="PASS">
+        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Entab.ERP.Tests.VerifyLocationMasterPage@411f53a0]" started-at="2026-01-21T18:06:46 IST" name="lauchApplication" finished-at="2026-01-21T18:06:57 IST" duration-ms="10400" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchApplication -->
-        <test-method signature="verifyLocationMasterPage()[pri:1, instance:Entab.ERP.Tests.VerifyLocationMasterPage@24c1b2d2]" started-at="2026-01-21T15:57:55 IST" name="verifyLocationMasterPage" finished-at="2026-01-21T15:58:06 IST" duration-ms="10777" status="PASS">
+        <test-method signature="verifyLocationMasterPage()[pri:1, instance:Entab.ERP.Tests.VerifyLocationMasterPage@411f53a0]" started-at="2026-01-21T18:06:57 IST" name="verifyLocationMasterPage" finished-at="2026-01-21T18:07:08 IST" duration-ms="10884" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLocationMasterPage -->
-        <test-method signature="verifyAddLocationMandatoryField()[pri:2, instance:Entab.ERP.Tests.VerifyLocationMasterPage@24c1b2d2]" started-at="2026-01-21T15:58:06 IST" name="verifyAddLocationMandatoryField" finished-at="2026-01-21T15:58:09 IST" duration-ms="3283" status="PASS">
+        <test-method signature="verifyExportCSV()[pri:2, instance:Entab.ERP.Tests.VerifyLocationMasterPage@411f53a0]" started-at="2026-01-21T18:07:08 IST" name="verifyExportCSV" finished-at="2026-01-21T18:07:08 IST" duration-ms="56" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddLocationMandatoryField -->
-        <test-method signature="verifyAddNewLocationion()[pri:3, instance:Entab.ERP.Tests.VerifyLocationMasterPage@24c1b2d2]" started-at="2026-01-21T15:58:09 IST" name="verifyAddNewLocationion" finished-at="2026-01-21T15:58:15 IST" duration-ms="6225" status="PASS">
+        </test-method> <!-- verifyExportCSV -->
+        <test-method signature="verifyExportExcel()[pri:3, instance:Entab.ERP.Tests.VerifyLocationMasterPage@411f53a0]" started-at="2026-01-21T18:07:08 IST" name="verifyExportExcel" finished-at="2026-01-21T18:07:08 IST" duration-ms="230" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddNewLocationion -->
-        <test-method signature="verifyUpdateLocationPage()[pri:4, instance:Entab.ERP.Tests.VerifyLocationMasterPage@24c1b2d2]" started-at="2026-01-21T15:58:15 IST" name="verifyUpdateLocationPage" finished-at="2026-01-21T15:58:22 IST" duration-ms="7011" status="PASS">
+        </test-method> <!-- verifyExportExcel -->
+        <test-method signature="verifyExportPDF()[pri:4, instance:Entab.ERP.Tests.VerifyLocationMasterPage@411f53a0]" started-at="2026-01-21T18:07:08 IST" name="verifyExportPDF" finished-at="2026-01-21T18:07:08 IST" duration-ms="267" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUpdateLocationPage -->
-        <test-method signature="verifyUpdateLocation()[pri:5, instance:Entab.ERP.Tests.VerifyLocationMasterPage@24c1b2d2]" started-at="2026-01-21T15:58:22 IST" name="verifyUpdateLocation" finished-at="2026-01-21T15:58:29 IST" duration-ms="6912" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUpdateLocation -->
-        <test-method signature="verifyDuplicateLocationName()[pri:6, instance:Entab.ERP.Tests.VerifyLocationMasterPage@24c1b2d2]" started-at="2026-01-21T15:58:29 IST" name="verifyDuplicateLocationName" finished-at="2026-01-21T15:58:37 IST" duration-ms="8111" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDuplicateLocationName -->
-        <test-method signature="verifyDeleteLocation()[pri:7, instance:Entab.ERP.Tests.VerifyLocationMasterPage@24c1b2d2]" started-at="2026-01-21T15:58:37 IST" name="verifyDeleteLocation" finished-at="2026-01-21T15:58:43 IST" duration-ms="5433" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDeleteLocation -->
-        <test-method signature="verifyDetetedUsedLocation()[pri:8, instance:Entab.ERP.Tests.VerifyLocationMasterPage@24c1b2d2]" started-at="2026-01-21T15:58:43 IST" name="verifyDetetedUsedLocation" finished-at="2026-01-21T15:58:54 IST" duration-ms="11280" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDetetedUsedLocation -->
-        <test-method signature="verifyDeactivateLocation()[pri:9, instance:Entab.ERP.Tests.VerifyLocationMasterPage@24c1b2d2]" started-at="2026-01-21T15:58:54 IST" name="verifyDeactivateLocation" finished-at="2026-01-21T15:59:00 IST" duration-ms="6104" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDeactivateLocation -->
-        <test-method signature="verifyActivateLocation()[pri:10, instance:Entab.ERP.Tests.VerifyLocationMasterPage@24c1b2d2]" started-at="2026-01-21T15:59:00 IST" name="verifyActivateLocation" finished-at="2026-01-21T15:59:06 IST" duration-ms="6142" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyActivateLocation -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:Entab.ERP.Tests.VerifyLocationMasterPage@24c1b2d2]" started-at="2026-01-21T15:59:06 IST" name="logOut" finished-at="2026-01-21T15:59:13 IST" duration-ms="6519" status="PASS">
+        </test-method> <!-- verifyExportPDF -->
+        <test-method is-config="true" signature="logOut()[pri:0, instance:Entab.ERP.Tests.VerifyLocationMasterPage@411f53a0]" started-at="2026-01-21T18:07:08 IST" name="logOut" finished-at="2026-01-21T18:10:14 IST" duration-ms="186049" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[java.util.concurrent.TimeoutException
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5cc1481c844722f353c03c3ac948f0fa, findElement {using=xpath, value=(//img[@class='profileImg'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.193, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\Guncha\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64911}, goog:processID: 25380, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64911/devtoo..., se:cdpVersion: 143.0.7499.193, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5cc1481c844722f353c03c3ac948f0fa]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5cc1481c844722f353c03c3ac948f0fa, findElement {using=xpath, value=(//img[@class='profileImg'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.193, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\Guncha\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64911}, goog:processID: 25380, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64911/devtoo..., se:cdpVersion: 143.0.7499.193, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5cc1481c844722f353c03c3ac948f0fa
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:427)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at Entab.ERP.Pages.HomePage.logOut(HomePage.java:85)
+at Entab.ERP.TestComponents.BaseTest.logOut(BaseTest.java:86)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:229)
+at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:215)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:131)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.util.concurrent.TimeoutException
+at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2874)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Entab.ERP.Tests.VerifyLocationMasterPage@24c1b2d2]" started-at="2026-01-21T15:59:13 IST" name="tearDown" finished-at="2026-01-21T15:59:13 IST" duration-ms="33" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Entab.ERP.Tests.VerifyLocationMasterPage@411f53a0]" started-at="2026-01-21T18:10:14 IST" name="tearDown" finished-at="2026-01-21T18:10:45 IST" duration-ms="31025" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Entab.ERP.Tests.VerifyLocationMasterPage -->
-    </test> <!-- Login Page Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

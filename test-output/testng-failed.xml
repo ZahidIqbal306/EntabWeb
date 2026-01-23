@@ -5,11 +5,13 @@
     <classes>
       <class name="Entab.ERP.Tests.VerifyLocationMasterPage">
         <methods>
-          <include name="verifyUpdateLocationPage"/>
           <include name="logOut"/>
           <include name="tearDown"/>
-          <include name="verifyUpdateLocation"/>
+          <include name="verifyExportPDF"/>
           <include name="lauchApplication"/>
+          <include name="verifyExportExcel"/>
+          <include name="verifyExportCSV"/>
+          <include name="verifyLocationMasterPage"/>
         </methods>
       </class> <!-- Entab.ERP.Tests.VerifyLocationMasterPage -->
     </classes>

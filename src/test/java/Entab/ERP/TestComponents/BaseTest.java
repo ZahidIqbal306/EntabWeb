@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
@@ -11,8 +12,10 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
@@ -38,12 +41,23 @@ public class BaseTest {
 		if(browserName.equalsIgnoreCase("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			//driver = new ChromeDriver();
+			
+			HashMap<String, Object> prefs = new HashMap<>();
+	        prefs.put("download.default_directory", "C:\\Users\\Guncha\\Downloads");
+	        prefs.put("download.prompt_for_download", false);
+
+	        ChromeOptions options = new ChromeOptions();
+	        options.setExperimentalOption("prefs", prefs);
+
+	        driver = new ChromeDriver(options);
+			
 		}
 		else if (browserName.equalsIgnoreCase("firefox"))
 		{
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
+
 		}
 		else if (browserName.equalsIgnoreCase("edge"))
 		{

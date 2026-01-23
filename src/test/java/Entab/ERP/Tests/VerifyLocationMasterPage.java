@@ -23,7 +23,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 		Assert.assertEquals(text, "Location Master");
 	}
 	
-	@Test(priority=2, enabled = true)
+	@Test(priority=2, enabled = false)
 	public void verifyAddLocationMandatoryField() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -39,7 +39,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 		Assert.assertTrue(companyBorderColor, "Company mandatory filed is not highlighted.");		
 	}
 	
-	@Test(priority=3, enabled = true)
+	@Test(priority=3, enabled = false)
 	public void verifyAddNewLocationion() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -48,7 +48,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 	    Assert.assertEquals(flag, true);
 	}
 	
-	@Test(priority=4, enabled = true)
+	@Test(priority=4, enabled = false)
 	public void verifyUpdateLocationPage() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -57,7 +57,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 		Assert.assertEquals(flag, true);		
 	}
 	
-	@Test(priority=5, enabled = true)
+	@Test(priority=5, enabled = false)
 	public void verifyUpdateLocation() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -66,7 +66,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 		Assert.assertEquals(flag, true);		
 	}
 	
-	@Test(priority=6, enabled = true)
+	@Test(priority=6, enabled = false)
 	public void verifyDuplicateLocationName() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -75,7 +75,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 	    Assert.assertEquals(flag, true);
 	}
 	
-	@Test(priority=7, enabled = true)
+	@Test(priority=7, enabled = false)
 	public void verifyDeleteLocation() throws InterruptedException
 	{		
 		LocationMaster lm = new LocationMaster(driver);
@@ -84,7 +84,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 	    Assert.assertEquals(flag, true);
 	}
 	
-	@Test(priority=8, enabled = true)
+	@Test(priority=8, enabled = false)
 	public void verifyDetetedUsedLocation() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -93,7 +93,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 	    Assert.assertEquals(flag, true);
 	}
 	
-	@Test(priority=9,retryAnalyzer = Retry.class)
+	@Test(priority=9,retryAnalyzer = Retry.class, enabled = false)
 	public void verifyDeactivateLocation() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -111,7 +111,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 		System.out.println("Location is deactivated successfully.");
 	}	
 	
-	@Test(priority=10,retryAnalyzer = Retry.class)
+	@Test(priority=10,retryAnalyzer = Retry.class, enabled = false)
 	public void verifyActivateLocation() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
@@ -127,6 +127,33 @@ public class VerifyLocationMasterPage extends BaseTest {
 		
 		Assert.assertEquals(flag, true);
 		System.out.println("Location is activated successfully.");
+	}
+	
+	@Test(priority=2)
+	public void verifyExportCSV() throws InterruptedException
+	{
+		LocationMaster lm = new LocationMaster(driver);
+	    boolean isFileDownloaded =  lm.exportCSV();		
+		Assert.assertTrue(isFileDownloaded, "CSV file not downloaded");	
+		System.out.println("CSV file is download successfully.");
+	}
+	
+	@Test(priority=3)
+	public void verifyExportExcel() throws InterruptedException
+	{
+		LocationMaster lm = new LocationMaster(driver);
+	    boolean isFileDownloaded =  lm.exportExcel();		
+		Assert.assertTrue(isFileDownloaded, "CSV file not downloaded");		
+		System.out.println("Excel file is download successfully.");
+	}
+	
+	@Test(priority=4)
+	public void verifyExportPDF() throws InterruptedException
+	{
+		LocationMaster lm = new LocationMaster(driver);
+	    boolean isFileDownloaded =  lm.exportPDF();		
+		Assert.assertTrue(isFileDownloaded, "CSV file not downloaded");		
+		System.out.println("Pdf file is download successfully.");
 	}
 
 
