@@ -45,7 +45,7 @@ public class CommonComponents
 	public void visibilityOfWebElement(WebElement ele)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(ele));
+		wait.until(ExpectedConditions.visibilityOf(ele));		
 	}
 	
 	// Explicit Wait - Visibility of Element by locator
@@ -79,7 +79,14 @@ public class CommonComponents
 	public void selectByValue(WebElement ele, String value)
 	{
 		Select a = new Select(ele);
-		a.selectByValue(value);		
+		a.selectByValue(value);	
+	}
+	
+	// Select drop down via Value
+	public void selectByVisibleText(WebElement ele, String value)
+	{
+		Select a = new Select(ele);
+		a.selectByVisibleText(value);	
 	}
 	
 	// Window Scroll
@@ -98,5 +105,22 @@ public class CommonComponents
 		count++;
 		return newValue;		
 	}	
+	
+	// incremental value
+    public static int counts = 1;
+	public int incrementIntegerValue(int value)
+	{
+		
+		int newValue = value + counts;
+		counts++;
+		return newValue;		
+	}
+	
+	// Data field color verification - Mandatory 
+	public boolean isFieldMarkedMandatory(WebElement element) 
+	{
+	    String borderColor = element.getCssValue("border-color");
+	    return borderColor.contains("255, 0, 0"); // red color
+	}
 	
 }

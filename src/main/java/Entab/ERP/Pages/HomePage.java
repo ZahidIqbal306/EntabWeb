@@ -74,7 +74,7 @@ public class HomePage extends CommonComponents {
 		return name;
 	}
 
-	@FindBy(xpath = "//a[@class='logout']")
+	@FindBy(xpath = "//a[@class='logout']") 
 	WebElement logout;
 	
 	public void logOut() throws InterruptedException
@@ -145,7 +145,7 @@ public class HomePage extends CommonComponents {
 			if(menuName.equals(module))
 			{
 				menuList.get(i).click();
-				System.out.println("Opne Module Name is : " +menuName);
+				System.out.println("Open Module Name is : " +menuName);
 				break;
 			}
 		}

@@ -31,7 +31,16 @@ public class Constant {
 	static Map<String,String> verifyExportExcel=new LinkedHashMap<String, String>();
 	static Map<String,String> verifyExportPDF=new LinkedHashMap<String, String>();
 
-
+	// Verify Group Ledger Master Page
+	static Map<String,String> verifyGroupLedgerMasterPage=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyMandatroyFieldGroupLedger=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyAddGroupLedger=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyUpdateGroupLedger=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyDuplicateGroupLedger=new LinkedHashMap<String, String>();
+	static Map<String,String> verifydeleteGroupLedger=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyLedgerExportCSV=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyLedgerExportExcel=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyLedgerExportPdf=new LinkedHashMap<String, String>();
 
 
 //======================2nd Part=================================================================
@@ -153,8 +162,73 @@ public class Constant {
 		verifyExportPDF.put("Step 3 : ","Now Click on the print button.");
 		verifyExportPDF.put("Step 4 : ","Pdf file is opened into the next tab.");
 	
-	}
 	
+// --------------- Group Ledger Master Page --------------------------------------------------------
+
+	//Verify Location Master Page
+	  verifyGroupLedgerMasterPage.put("Step 1 : ","Login with Valid Credential.");
+	  verifyGroupLedgerMasterPage.put("Step 2 : ","Click on the Menu Button.");
+	  verifyGroupLedgerMasterPage.put("Step 3 : ","Go to the Inventory Module.");
+	  verifyGroupLedgerMasterPage.put("Step 4 : ","Open the Group Ledger Master page - Setting > Group Ledger Master Page.");
+	  verifyGroupLedgerMasterPage.put("Step 5 : ","Group Ledger Master page is opened successfully.");
+			
+	//Verify Add Group Ledger Mandatory Fields
+	  verifyMandatroyFieldGroupLedger.put("Step 1 : ","Login with Valid Credential.");
+	  verifyMandatroyFieldGroupLedger.put("Step 2 : ","Open the Inventory > Group Ledger Master Page");
+	  verifyMandatroyFieldGroupLedger.put("Step 3 : ","Click on the add new Ledger button.");
+	  verifyMandatroyFieldGroupLedger.put("Step 4 : ","Verify the mandatory field.");
+	  verifyMandatroyFieldGroupLedger.put("Step 5 : ","Nature Of group, Group Name and Priorirty mandatory fields are highlighted with red color border.");
+
+	//Verify Add New Ledger 
+	  verifyAddGroupLedger.put("Step 1 : ","Login with Valid Credential.");
+	  verifyAddGroupLedger.put("Step 2 : ","Open the Inventory > Group Ledger Master Page");
+	  verifyAddGroupLedger.put("Step 3 : ","Click on the add new ledger button.");
+	  verifyAddGroupLedger.put("Step 4 : ","Fill the all mandatory field.");
+	  verifyAddGroupLedger.put("Step 5 : ","Click on the save button");
+	  verifyAddGroupLedger.put("Step 6 : ","Group Ledger has been added successfully.");
+			
+	//Verify Update Ledger 
+	  verifyUpdateGroupLedger.put("Step 1 : ","Login with Valid Credential.");
+	  verifyUpdateGroupLedger.put("Step 2 : ","Open the Inventory > Group Ledger Master Page");
+	  verifyUpdateGroupLedger.put("Step 3 : ","Edit any Location.");
+	  verifyUpdateGroupLedger.put("Step 4 : ","Update the Ledger field.");
+	  verifyUpdateGroupLedger.put("Step 5 : ","Click on the update button");
+	  verifyUpdateGroupLedger.put("Step 6 : ","Location has been updated successfully.");
+			
+	//Verify Duplicate Location Name
+	  verifyDuplicateGroupLedger.put("Step 1 : ","Login with Valid Credential.");
+	  verifyDuplicateGroupLedger.put("Step 2 : ","Open the Inventory > Group Ledger Master Page");
+	  verifyDuplicateGroupLedger.put("Step 3 : ","Click on the add new Ledger button.");
+	  verifyDuplicateGroupLedger.put("Step 4 : ","Enter the exist ledger name and saved it.");
+	  verifyDuplicateGroupLedger.put("Step 5 : ","This Ledger is already exist, alert is getting.");
+			
+	 //Verify Delete Location - Which are not in used.
+	  verifydeleteGroupLedger.put("Step 1 : ","Login with Valid Credential.");
+	  verifydeleteGroupLedger.put("Step 2 : ","Open the Inventory > Group Ledger Master Page");
+	  verifydeleteGroupLedger.put("Step 3 : ","Delete any location which is not in used.");
+	  verifydeleteGroupLedger.put("Step 4 : ","Location has been deleted successfully.");
+
+	//Verify Ledger Export CSV Functionality
+	  verifyLedgerExportCSV.put("Step 1 : ","Login with Valid Credential.");
+	  verifyLedgerExportCSV.put("Step 2 : ","Open the Inventory > Group Ledger Master Page");
+	  verifyLedgerExportCSV.put("Step 3 : ","Now Click on the CSV button.");
+	  verifyLedgerExportCSV.put("Step 4 : ","CSV file is downloaded successfully.");
+		
+	//Verify Ledger Export Excel Functionality
+	  verifyLedgerExportExcel.put("Step 1 : ","Login with Valid Credential.");
+	  verifyLedgerExportExcel.put("Step 2 : ","Open the Inventory > Group Ledger Master Page");
+	  verifyLedgerExportExcel.put("Step 3 : ","Now Click on the export Excel button.");
+	  verifyLedgerExportExcel.put("Step 4 : ","Excel file is downloaded successfully.");
+		
+		//Verify Ledger Export Print Functionality
+	  verifyLedgerExportPdf.put("Step 1 : ","Login with Valid Credential.");
+	  verifyLedgerExportPdf.put("Step 2 : ","Open the Inventory > Group Ledger Master Page");
+	  verifyLedgerExportPdf.put("Step 3 : ","Now Click on the print button.");
+	  verifyLedgerExportPdf.put("Step 4 : ","Pdf file is opened into the next tab.");	  
+	  
+	  
+
+}	
  // ===========================3rd Part===========================================================================
 	
 		// verify Login Functionality
@@ -233,8 +307,36 @@ public class Constant {
 			else if(key.equalsIgnoreCase("verifyExportPDF"))
 			{
 				return verifyExportPDF;
-			}			
+			}	
+			
+// ------------------------------ Group Ledger Master Page -------------------------------------------------------			
+			else if(key.equalsIgnoreCase("verifyGroupLedgerMasterPage"))
+			{
+				return verifyLocationMasterPage;
+			}
+			else if(key.equalsIgnoreCase("verifyMandatroyFieldGroupLedger"))
+			{
+				return verifyMandatroyFieldGroupLedger;
+			}
+			else if(key.equalsIgnoreCase("verifyAddGroupLedger"))
+			{
+				return verifyAddGroupLedger;
+			}
+			else if(key.equalsIgnoreCase("verifyUpdateGroupLedger"))
+			{
+				return verifyUpdateGroupLedger;
+			}
+			else if(key.equalsIgnoreCase("verifyDuplicateGroupLedger"))
+			{
+				return verifyDuplicateGroupLedger;
+			}
+			else if(key.equalsIgnoreCase("verifydeleteGroupLedger"))
+			{
+				return verifydeleteGroupLedger;
+			}
+				
 			
 		return defaultFun;
-	}
+  }
 }
+

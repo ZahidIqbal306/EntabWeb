@@ -43,6 +43,7 @@ public class BaseTest {
 			WebDriverManager.chromedriver().setup();
 			//driver = new ChromeDriver();
 			
+			// For Download
 			HashMap<String, Object> prefs = new HashMap<>();
 	        prefs.put("download.default_directory", "C:\\Users\\Guncha\\Downloads");
 	        prefs.put("download.prompt_for_download", false);

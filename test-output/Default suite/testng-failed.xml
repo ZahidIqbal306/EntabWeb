@@ -3,17 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Entab.ERP.Tests.VerifyLocationMasterPage">
+      <class name="Entab.ERP.Tests.VerifyGroupLedgerMasterPage">
         <methods>
+          <include name="verifyExportCSV"/>
           <include name="logOut"/>
           <include name="tearDown"/>
-          <include name="verifyExportPDF"/>
-          <include name="lauchApplication"/>
           <include name="verifyExportExcel"/>
-          <include name="verifyExportCSV"/>
-          <include name="verifyLocationMasterPage"/>
+          <include name="lauchApplication"/>
         </methods>
-      </class> <!-- Entab.ERP.Tests.VerifyLocationMasterPage -->
+      </class> <!-- Entab.ERP.Tests.VerifyGroupLedgerMasterPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -155,6 +155,4 @@ public class VerifyLocationMasterPage extends BaseTest {
 		Assert.assertTrue(isFileDownloaded, "CSV file not downloaded");		
 		System.out.println("Pdf file is download successfully.");
 	}
-
-
 }
