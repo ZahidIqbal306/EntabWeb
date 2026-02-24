@@ -35,10 +35,10 @@ public class CommonComponents
 		return getData;	
 	}
 	
-	// Explicit wait - for the given time
-	public void threadSleep(int seconds) {
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-	    wait.until(driver -> true);
+	// Set the thread time
+	public void threadSleep(int time) throws InterruptedException
+	{
+		Thread.sleep(time);
 	}
 	
 	// Explicit wait - Visibility Of WebElemnt	
