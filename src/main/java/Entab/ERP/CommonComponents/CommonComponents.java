@@ -35,14 +35,8 @@ public class CommonComponents
 		return getData;	
 	}
 	
-	// Set the thread time
-	public void threadSleep(int time) throws InterruptedException
-	{
-		Thread.sleep(time);
-	}
-	
 	// Explicit wait - for the given time
-	public void waitForSeconds(int seconds) {
+	public void threadSleep(int seconds) {
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
 	    wait.until(driver -> true);
 	}
