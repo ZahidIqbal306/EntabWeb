@@ -2,9 +2,10 @@ package Entab.ERP.CommonComponents;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Properties;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +15,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.reactivex.rxjava3.functions.Action;
 
 public class CommonComponents 
 {
@@ -39,6 +39,12 @@ public class CommonComponents
 	public void threadSleep(int time) throws InterruptedException
 	{
 		Thread.sleep(time);
+	}
+	
+	// Explicit wait - for the given time
+	public void waitForSeconds(int seconds) {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+	    wait.until(driver -> true);
 	}
 	
 	// Explicit wait - Visibility Of WebElemnt	
@@ -97,7 +103,7 @@ public class CommonComponents
 	}
 	
 	// incremental value
-    public static int count = 1;
+    private int count = 1;
 	public String incrementValue(String value)
 	{
 		
@@ -107,7 +113,7 @@ public class CommonComponents
 	}	
 	
 	// incremental value
-    public static int counts = 1;
+    private int counts = 1;
 	public int incrementIntegerValue(int value)
 	{
 		
@@ -120,7 +126,17 @@ public class CommonComponents
 	public boolean isFieldMarkedMandatory(WebElement element) 
 	{
 	    String borderColor = element.getCssValue("border-color");
-	    return borderColor.contains("255, 0, 0"); // red color
+	   // return borderColor.contains("255, 0, 0"); // red color
+	    return borderColor.contains("255") && borderColor.contains("0"); 
+	}
+	
+	// Get Current Date - yyyy-MM-dd
+	public String currentDateFormat()
+	{
+		LocalDate currentDate = LocalDate.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedDate = currentDate.format(formatter);
+        return formattedDate;
 	}
 	
 }

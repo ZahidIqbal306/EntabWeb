@@ -336,6 +336,7 @@ public class LocationMaster extends CommonComponents
 	}
 	
 	// Export CSV ----------------------------------------------------------------------------------
+	String currentDate = currentDateFormat();
 	
 	@FindBy(xpath ="//button[@title='CSV']")
 	WebElement exportCSV;	
@@ -345,7 +346,7 @@ public class LocationMaster extends CommonComponents
         exportCSV.click();
 
         String downloadPath = "C:\\Users\\Guncha\\Downloads";
-        File file = new File(downloadPath + "\\Location Master_2026-01-21.csv");
+        File file = new File(downloadPath + "\\Location Master_"+currentDate+".csv");
 
         int waitTime = 0;
         while (waitTime < 20) 
@@ -370,7 +371,7 @@ public class LocationMaster extends CommonComponents
 			exportExcel.click();
 
 	        String downloadPath = "C:\\Users\\Guncha\\Downloads";
-	        File file = new File(downloadPath + "\\Location Master_2026-01-21.xlsx");
+	        File file = new File(downloadPath + "\\Location Master_"+currentDate+".xlsx");
 
 	        int waitTime = 0;
 	        while (waitTime < 20) 
@@ -406,8 +407,7 @@ public class LocationMaster extends CommonComponents
 	 	        driver.close();
 	 	        driver.switchTo().window(parent);
 	 	        driver.switchTo().defaultContent();
-	            return true;
-	           
+	            return true;	           
 	        }
 	       
 	        return false;
