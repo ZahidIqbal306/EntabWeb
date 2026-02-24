@@ -1,5 +1,6 @@
 package Entab.ERP.Pages;
 import java.io.File;
+import java.util.Iterator;
 import java.util.Set;
 
 import org.openqa.selenium.NoAlertPresentException;
@@ -325,14 +326,21 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	{
 		threadSleep(3000);
 		exportPdfButton.click();
-		
+		Thread.sleep(3000);
 		Set<String> windows = driver.getWindowHandles();
+		Iterator<String> itr = windows.iterator();
 		int count = windows.size();
-		System.out.println("No of windows is opened - " + count);
-		if(count > 0)
-		{
-			return true;
-		}
+		System.out.println("Window size is : "+count);
+        while (count > 1) 
+        {
+        	String parent = itr.next();
+ 	        String child = itr.next();
+ 	        driver.switchTo().window(child);
+ 	        driver.close();
+ 	        driver.switchTo().window(parent);
+ 	        driver.switchTo().defaultContent();
+            return true;           
+        }
       return false;
 	}
 
