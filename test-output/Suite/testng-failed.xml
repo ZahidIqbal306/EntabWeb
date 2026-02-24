@@ -6,23 +6,14 @@
   </listeners>
   <test thread-count="5" name="Login Page Test(failed)">
     <classes>
-      <class name="Entab.ERP.Tests.VerifyLocationMasterPage">
+      <class name="Entab.ERP.Tests.VerifyGroupLedgerMasterPage">
         <methods>
-          <include name="verifyDeleteLocation"/>
-          <include name="verifyUpdateLocationPage"/>
-          <include name="verifyDeactivateLocation"/>
-          <include name="verifyDuplicateLocationName"/>
-          <include name="verifyDetetedUsedLocation"/>
           <include name="logOut"/>
-          <include name="verifyAddLocationMandatoryField"/>
-          <include name="verifyAddNewLocationion"/>
           <include name="tearDown"/>
-          <include name="verifyUpdateLocation"/>
           <include name="lauchApplication"/>
-          <include name="verifyActivateLocation"/>
-          <include name="verifyLocationMasterPage"/>
+          <include name="verifyExportPdf"/>
         </methods>
-      </class> <!-- Entab.ERP.Tests.VerifyLocationMasterPage -->
+      </class> <!-- Entab.ERP.Tests.VerifyGroupLedgerMasterPage -->
     </classes>
   </test> <!-- Login Page Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

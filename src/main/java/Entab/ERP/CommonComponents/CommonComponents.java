@@ -2,6 +2,8 @@ package Entab.ERP.CommonComponents;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Properties;
 
@@ -121,6 +123,15 @@ public class CommonComponents
 	{
 	    String borderColor = element.getCssValue("border-color");
 	    return borderColor.contains("255, 0, 0"); // red color
+	}
+	
+	// Get Current Date - yyyy-MM-dd
+	public String currentDateFormat()
+	{
+		LocalDate currentDate = LocalDate.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedDate = currentDate.format(formatter);
+        return formattedDate;
 	}
 	
 }

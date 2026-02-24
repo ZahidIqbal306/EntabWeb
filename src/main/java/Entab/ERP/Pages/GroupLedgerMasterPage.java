@@ -276,13 +276,16 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	
 	@FindBy(xpath ="//button[@class='dt-button buttons-csv buttons-html5']")
 	WebElement exportCSVButton;
+	
+	String currentDate = currentDateFormat();
 	public boolean exportCSV() throws InterruptedException
 	{
 		threadSleep(3000);
 		exportCSVButton.click();
 		
 		String path = "C:\\Users\\Guncha\\Downloads";
-		File file = new File (path + "\\Group Ledger Master_2026-02-17.csv");
+		File file = new File (path + "\\Group Ledger Master_"+currentDate+".csv");
+		System.out.println("Today date is :" +currentDate);
 
 		int count = 0;
 		while(count < 20)
@@ -301,11 +304,11 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	WebElement exportExcelButton;
 	public boolean exportExcel() throws InterruptedException
 	{
-		threadSleep(3000);
+		threadSleep(2000);
 		exportExcelButton.click();
 		
 		String path1 = "C:\\Users\\Guncha\\Downloads";
-		File file = new File (path1 + "\\Group Ledger Master_2026-02-17.xlsx");
+		File file = new File (path1 + "\\Group Ledger Master_"+currentDate+".xlsx");
 
 		int count = 0;
 		while(count < 20)
@@ -324,9 +327,9 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	WebElement exportPdfButton;
 	public boolean exportPdf() throws InterruptedException
 	{
-		threadSleep(3000);
+		threadSleep(2000);
 		exportPdfButton.click();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		Set<String> windows = driver.getWindowHandles();
 		Iterator<String> itr = windows.iterator();
 		int count = windows.size();
@@ -336,6 +339,7 @@ public class GroupLedgerMasterPage extends CommonComponents{
         	String parent = itr.next();
  	        String child = itr.next();
  	        driver.switchTo().window(child);
+ 	        threadSleep(2000);
  	        driver.close();
  	        driver.switchTo().window(parent);
  	        driver.switchTo().defaultContent();
