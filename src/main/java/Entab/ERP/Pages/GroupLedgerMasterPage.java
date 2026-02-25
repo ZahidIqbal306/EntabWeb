@@ -50,7 +50,7 @@ public class GroupLedgerMasterPage extends CommonComponents{
 		String headertext = "";
 		groupLedgerMasterSubmenu.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
+		threadSleep(10000);
 		try 
 		{
 	        driver.switchTo().alert();
