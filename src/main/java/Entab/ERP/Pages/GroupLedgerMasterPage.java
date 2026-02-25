@@ -1,13 +1,13 @@
 package Entab.ERP.Pages;
 import java.io.File;
-import java.util.Iterator;
+import java.time.Duration;
 import java.util.Set;
-
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import Entab.ERP.CommonComponents.CommonComponents;
 
 public class GroupLedgerMasterPage extends CommonComponents{
@@ -42,15 +42,14 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	@FindBy(xpath="//button[@id='confirmButton']")
 	WebElement submitLocation;
 	
+	@FindBy(xpath="//th[@aria-label='Group Name']")
+	WebElement groupNameHeaderText;
+	
 	public String openGroupLedgerMaster() throws InterruptedException
 	{
 		String headertext = "";
 		groupLedgerMasterSubmenu.click();
-		threadSleep(5000);
-		//String alertText = "Please give the location permission to this user.";
-		//String alertText = driver.switchTo().alert().getText();
-		//System.out.println(alertText);
-		//driver.switchTo().alert().accept();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		try 
 		{
@@ -58,45 +57,35 @@ public class GroupLedgerMasterPage extends CommonComponents{
 			String alertText = driver.switchTo().alert().getText();
 			System.out.println(alertText);
 			driver.switchTo().alert().accept();
-			threadSleep(3000);
+			//visibilityOfWebElement(chooseLocationHeader);
+			threadSleep(5000);
 			String pageText = chooseLocationHeader.getText();
 			System.out.println("Open Page name is : " +pageText);
 			selectByVisibleText(selectGroupCompany, "Inventory Group");
 			selectByVisibleText(selectCompany, "Inventory Managment Test School");
 			selectByVisibleText(selectLocation, "Biological Lab Equipment");
 			submitLocation.click();
-			threadSleep(3000);	
+			System.out.println("Location is mapped successfully.");
+			visibilityOfWebElement(groupNameHeaderText);
 			headertext = groupLedgerHeaderText.getText();
 			headertext.trim();
 			System.out.println(headertext);
 	    } 
 		catch (NoAlertPresentException e)		
 		{
-			threadSleep(3000);
+			visibilityOfWebElement(chooseLocationHeader);
 			String pageText = chooseLocationHeader.getText();
 			System.out.println("Open Page name is : " +pageText);
 			selectByVisibleText(selectGroupCompany, "Inventory Group");
 			selectByVisibleText(selectCompany, "Inventory Managment Test School");
 			selectByVisibleText(selectLocation, "Biological Lab Equipment");
 			submitLocation.click();
-			threadSleep(3000);	
+			System.out.println("Location is mapped successfully.");
+			visibilityOfWebElement(groupNameHeaderText);
 			headertext = groupLedgerHeaderText.getText();
 			headertext.trim();
 			System.out.println(headertext);
 	    }
-		
-//		threadSleep(3000);
-//		String pageText = chooseLocationHeader.getText();
-//		System.out.println("Open Page name is : " +pageText);
-//		selectByVisibleText(selectGroupCompany, "Inventory Group");
-//		selectByVisibleText(selectCompany, "Inventory Managment Test School");
-//		selectByVisibleText(selectLocation, "Biological Lab Equipment");
-//		submitLocation.click();
-//		threadSleep(3000);	
-//		headertext = groupLedgerHeaderText.getText();
-//		headertext.trim();
-//		System.out.println(headertext);
-		
 		return headertext;
 	}
 	
@@ -129,15 +118,12 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	
 	public boolean mandatFieldGroupLedger() throws InterruptedException
 	{
+		visibilityOfWebElement(addGL);
 		addGL.click();
-		//natureOfGroup.clear();
 		groupName.clear();
 		priority.clear();
-		
-		threadSleep(3000);
+		visibilityOfWebElement(saveGL);
 		saveGL.click();	
-		threadSleep(5000);
-		
 		boolean natureFlag = isFieldMarkedMandatory(natureOfGroup);
 		boolean groupFlag = isFieldMarkedMandatory(groupName);
 		boolean priorityFlag = isFieldMarkedMandatory(priority);
@@ -158,10 +144,10 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	
 	public String addLedger() throws InterruptedException
 	{
+		visibilityOfWebElement(addGL);
 		addGL.click();
-		threadSleep(3000);
-		//natureOfGroup.clear();
-		natureOfGroup.click();
+		visibilityOfWebElement(saveGL);
+		//natureOfGroup.click();
 		selectGroupLedger.click();
 		natureOfGroup.click();
 		
@@ -173,7 +159,7 @@ public class GroupLedgerMasterPage extends CommonComponents{
 		String priorityValue = incrementValue("110");
 		priority.sendKeys(priorityValue);
 		
-		threadSleep(3000);
+		visibilityOfWebElement(saveGL);
 		saveGL.click();	
 		return ledgerName;
 	}	
@@ -201,11 +187,12 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	
 	public String updateLedger(String ledgerName) throws InterruptedException
 	{
+		invisibilityOfWebElement(updateLedgerToast);
+		visibilityOfWebElement(searchLedger);
 		searchLedger.sendKeys(ledgerName);
-		threadSleep(3000);
+		visibilityOfWebElement(editLedger);
 		editLedger.click();		
 		priority.clear();
-		threadSleep(2000);
 		priority.sendKeys("901");
 		updateLedger.click();
 		
@@ -223,27 +210,22 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	
 	public String addDuplicateLedger(String ledgerName) throws InterruptedException
 	{
+		invisibilityOfWebElement(duplicateLedgerToast);
 		addGL.click();
-		threadSleep(3000);
-		//natureOfGroup.clear();
+		visibilityOfWebElement(natureOfGroup);
 		natureOfGroup.click();
 		selectGroupLedger.click();
 		natureOfGroup.click();
-		
-		threadSleep(2000);
+		visibilityOfWebElement(groupName);
 		groupName.clear();
-		threadSleep(2000);
 		System.out.println(ledgerName);
 		groupName.sendKeys(ledgerName);
 		
-		threadSleep(2000);
 		priority.clear();
 		String priorityValue = incrementValue("130");
 		priority.sendKeys(priorityValue);
-		
-		threadSleep(3000);
-		saveGL.click();	
-		threadSleep(3000);
+		visibilityOfWebElement(saveGL);
+		saveGL.click();
 		visibilityOfWebElement(duplicateLedgerToast);
 		String duplicateText = duplicateLedgerToast.getText();
 		System.out.println(duplicateText);
@@ -262,9 +244,10 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	
 	public String deleteLedger(String ledgerName) throws InterruptedException
 	{
-		threadSleep(3000);
+		invisibilityOfWebElement(deleteLedgerToast);
+		visibilityOfWebElement(searchLedger);
 		searchLedger.sendKeys(ledgerName);
-		threadSleep(3000);
+		visibilityOfWebElement(deleteLedger);
 		deleteLedger.click();
 		driver.switchTo().alert().accept();
 		
@@ -278,9 +261,11 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	WebElement exportCSVButton;
 	
 	String currentDate = currentDateFormat();
+	
 	public boolean exportCSV() throws InterruptedException
 	{
-		threadSleep(3000);
+		invisibilityOfWebElement(deleteLedgerToast);
+		visibilityOfWebElement(exportCSVButton);
 		exportCSVButton.click();
 		
 		String path = "C:\\Users\\Guncha\\Downloads";
@@ -294,7 +279,6 @@ public class GroupLedgerMasterPage extends CommonComponents{
 			{
 				return true;
 			}
-			threadSleep(2000);
 			count++;
 		}
 		return false;
@@ -304,20 +288,19 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	WebElement exportExcelButton;
 	public boolean exportExcel() throws InterruptedException
 	{
-		threadSleep(2000);
+		visibilityOfWebElement(exportExcelButton);
 		exportExcelButton.click();
 		
 		String path1 = "C:\\Users\\Guncha\\Downloads";
-		File file = new File (path1 + "\\Group Ledger Master_"+currentDate+".xlsx");
+		File file1 = new File (path1 + "\\Group Ledger Master_"+currentDate+".xlsx");
 
 		int count = 0;
 		while(count < 20)
 		{
-			if(file.exists())
+			if(file1.exists())
 			{
 				return true;
 			}
-			threadSleep(2000);
 			count++;
 		}
 		return false;
@@ -325,27 +308,36 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	
 	@FindBy(xpath ="//button[@class='dt-button buttons-print']")
 	WebElement exportPdfButton;
+	
 	public boolean exportPdf() throws InterruptedException
 	{
-		threadSleep(2000);
-		exportPdfButton.click();
-		threadSleep(2000);
-		Set<String> windows = driver.getWindowHandles();
-		Iterator<String> itr = windows.iterator();
-		int count = windows.size();
-		System.out.println("Window size is : "+count);
-        while (count > 1) 
-        {
-        	String parent = itr.next();
- 	        String child = itr.next();
- 	        driver.switchTo().window(child);
- 	        threadSleep(2000);
- 	        driver.close();
- 	        driver.switchTo().window(parent);
- 	        driver.switchTo().defaultContent();
-            return true;           
-        }
-      return false;
+
+	    String parentWindow = driver.getWindowHandle();
+
+	    exportPdfButton.click();
+
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    wait.until(d -> d.getWindowHandles().size() > 1);
+
+	    Set<String> allWindows = driver.getWindowHandles();
+	    System.out.println("Window size is : " + allWindows.size());
+
+	    if (allWindows.size() > 1) 
+	    {
+	        for (String window : allWindows) 
+	        {
+	            if (!window.equals(parentWindow)) 
+	            {
+	                driver.switchTo().window(window);
+	                driver.close();     // close print preview
+	            }
+	        }
+	        driver.switchTo().window(parentWindow);
+	        return true;
+	    }
+
+	    return false;
 	}
+
 
 }

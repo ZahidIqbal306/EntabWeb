@@ -5,11 +5,18 @@
     <classes>
       <class name="Entab.ERP.Tests.VerifyGroupLedgerMasterPage">
         <methods>
+          <include name="verifydeleteGroupLedger"/>
           <include name="verifyExportCSV"/>
+          <include name="verifyDuplicateGroupLedger"/>
           <include name="logOut"/>
+          <include name="verifyGroupLedgerMasterPage"/>
           <include name="tearDown"/>
           <include name="verifyExportExcel"/>
           <include name="lauchApplication"/>
+          <include name="verifyUpdateGroupLedger"/>
+          <include name="verifyAddGroupLedger"/>
+          <include name="verifyMandatroyFieldGroupLedger"/>
+          <include name="verifyExportPdf"/>
         </methods>
       </class> <!-- Entab.ERP.Tests.VerifyGroupLedgerMasterPage -->
     </classes>

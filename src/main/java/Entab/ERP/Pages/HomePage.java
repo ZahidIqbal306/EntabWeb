@@ -30,7 +30,7 @@ public class HomePage extends CommonComponents {
 		String Id = "";
 		if(invisibilityOfWebElement(profileUserId)==true)
 		{
-			threadSleep(6000);
+			visibilityOfWebElement(imageIcon);
 			imageIcon.click();
 			visibilityOfWebElement(profileUserId);
 			String profileId = profileUserId.getText();
@@ -56,7 +56,7 @@ public class HomePage extends CommonComponents {
 		String name = "";
 		if(invisibilityOfWebElement(profileUserName)==true)
 		{
-			threadSleep(6000);
+			visibilityOfWebElement(imageIcon);
 			imageIcon.click();
 			visibilityOfWebElement(profileUserName);
 			String profileList = profileUserName.getText();
@@ -81,7 +81,7 @@ public class HomePage extends CommonComponents {
 	{
 		if(invisibilityOfWebElement(logout)==true)
 		{
-			threadSleep(6000);
+			visibilityOfWebElement(imageIcon);
 			imageIcon.click();
 			visibilityOfWebElement(logout);
 			logout.click();
@@ -104,8 +104,6 @@ public class HomePage extends CommonComponents {
 	
 	public String changePasswordText() throws InterruptedException
 	{
-		threadSleep(2000);
-		//hoverText(driver,userProfile);
 		if(invisibilityOfWebElement(passText)==true)
 		{
 			imageIcon.click();
@@ -136,9 +134,8 @@ public class HomePage extends CommonComponents {
 	// Open the Inventory Module
 	public void selectModuleName(String module) throws InterruptedException
 	{
-		//String module = "Inventory";
+		visibilityOfWebElement(selectMenu);
 		selectMenu.click();	
-		threadSleep(2000);
 		for(int i=0; i<menuList.size();i++)
 		{
 			String menuName = menuList.get(i).getText();
@@ -149,11 +146,7 @@ public class HomePage extends CommonComponents {
 				break;
 			}
 		}
-		
-		
-//		visibilityOfWebElement(inventoryModule);
-//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", inventoryModule);
-//		inventoryModule.click();		
+	
 	}
 	
 }

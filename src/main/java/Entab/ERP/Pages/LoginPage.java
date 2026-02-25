@@ -21,13 +21,16 @@ public class LoginPage extends CommonComponents{
 	@FindBy(xpath = "//p[@class='loginbtn']")
 	WebElement enterLogin;
 	
+	@FindBy(xpath = "//img[@id='SchoolLogo']")
+	WebElement schoolLogo;
+	
 	public void loadUrl() throws IOException, InterruptedException
 	{
 		String url = getPropertyFileData("url");
 		driver.get(url);
 		System.out.println("Url is loaded successfully : " + url);
 		threadSleep(5000);
-		//visibilityOfWebElement(enterLogin);
+		//visibilityOfWebElement(schoolLogo);
 		enterLogin.click();
 		threadSleep(3000);		
 	}
@@ -55,11 +58,11 @@ public class LoginPage extends CommonComponents{
 	{		
 		String userName = getPropertyFileData("userName");
 		String password = getPropertyFileData("password");
-		threadSleep(3000);
+		visibilityOfWebElement(userId);
 		userId.sendKeys(userName);
 		pass.sendKeys(password);
 		loginButton.click();
-		threadSleep(4000);
+		visibilityOfWebElement(dasboardText);
 		String dashoabrd = dasboardText.getText();
 		System.out.println(dashoabrd);
 		

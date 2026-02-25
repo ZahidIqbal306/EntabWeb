@@ -70,9 +70,9 @@ public class InventoryMenu extends CommonComponents {
 	
 	public void  chooseLocation() throws InterruptedException
 	{
-		threadSleep(3000);
+		visibilityOfWebElement(chooseLocationSubmenu);
 		chooseLocationSubmenu.click();
-		threadSleep(5000);
+		visibilityOfWebElement(chooseLocationHeader);
 		String pageText = chooseLocationHeader.getText();
 		System.out.println("Open Page name is : " +pageText);
 		selectByVisibleText(selectGroupCompany, "Inventory Group");

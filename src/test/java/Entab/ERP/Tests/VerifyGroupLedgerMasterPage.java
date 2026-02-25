@@ -19,8 +19,6 @@ public class VerifyGroupLedgerMasterPage extends BaseTest {
 		homePage.selectModuleName("Inventory");
 		InventoryMenu im = new InventoryMenu(driver);
 		im.clickInventorySetting();
-		//im.chooseLocation();
-		//im.clickInventorySetting();
 		GroupLedgerMasterPage gl = new GroupLedgerMasterPage(driver);
 		String text = gl.openGroupLedgerMaster();
 		boolean flag = text.contains("Group Ledger");

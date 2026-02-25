@@ -1,5 +1,6 @@
 package Entab.ERP.Pages;
 import java.io.File;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
@@ -12,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Entab.ERP.CommonComponents.CommonComponents;
 
@@ -107,7 +109,7 @@ public class LocationMaster extends CommonComponents
 	
 	public boolean mandatoryFieldCompany() throws InterruptedException
 	{
-		threadSleep(2000);
+		visibilityOfWebElement(saveButton);
 		saveButton.click();
 		boolean color = companyHighlighted.isDisplayed();
 		System.out.println("company field is highlighted : " +color);
@@ -144,12 +146,11 @@ public class LocationMaster extends CommonComponents
 	
 	public String addNewLocation(String locatioName) throws InterruptedException
 	{
-		threadSleep(2000);
 		String toastText;
+		visibilityOfWebElement(addLocationButton);
 		addLocationButton.click();
 		addLocationName = incrementValue(locatioName);
 		locationName.sendKeys(addLocationName);
-		threadSleep(3000);
 		driver.findElement(By.xpath("//span[@id='select2-companyID-container']")).click();
 		driver.findElement(By.xpath("//option[text()='Inventory Managment Test School']")).click();
 		size.sendKeys("100");
@@ -175,9 +176,8 @@ public class LocationMaster extends CommonComponents
 	
 	public String updateLocationPage() throws InterruptedException
 	{
-		threadSleep(3000);
+		invisibilityOfWebElement(toast);
 		editLocation.click();
-		threadSleep(3000);
 		String text = updateLocation.getText();
 		System.out.println("Update Location Header text is : " +text);
 		closeButton.click();
@@ -196,7 +196,7 @@ public class LocationMaster extends CommonComponents
 	
 	public String updateLocation() throws InterruptedException
 	{
-		threadSleep(5000);
+		invisibilityOfWebElement(updateToast);
 		searchBox.sendKeys(addLocationName);
 		editLocation.click();
 		size.clear();
@@ -224,17 +224,16 @@ public class LocationMaster extends CommonComponents
 	
 	public String addDuplicateLocation() throws InterruptedException
 	{
-		threadSleep(3000);
+		invisibilityOfWebElement(updateToast);
+		visibilityOfWebElement(addLocationButton);
 		addLocationButton.click();
 		locationName.sendKeys(addLocationName);
-		threadSleep(3000);
 		driver.findElement(By.xpath("//span[@id='select2-companyID-container']")).click();
 		driver.findElement(By.xpath("//option[text()='Inventory Managment Test School']")).click();
 		saveButton.click();
 		visibilityOfWebElement(toast);
 		String toastText = toast.getText();
 		windowScroll(-700);
-		//threadSleep(5000);
 		closeButton.click();
 		System.out.println("Duplicate Toast Text is - :" +toastText);
 		return toastText;
@@ -250,7 +249,7 @@ public class LocationMaster extends CommonComponents
 	
 	public String deleteLocation() throws InterruptedException
 	{
-		threadSleep(5000);
+		invisibilityOfWebElement(updateToast);
 		visibilityOfWebElement(searchBox);
 		searchBox.sendKeys(addLocationName);
 		deleteloc.click();
@@ -267,7 +266,7 @@ public class LocationMaster extends CommonComponents
 	
 	public String deleteUsedLocation(String usedloc) throws InterruptedException
 	{
-		threadSleep(5000);
+		invisibilityOfWebElement(updateToast);
 		visibilityOfWebElement(searchBox);
 		searchBox.sendKeys(usedloc);
 		threadSleep(5000);
@@ -281,32 +280,9 @@ public class LocationMaster extends CommonComponents
 	}
 	
 	// ---------- Verify Activate / Deactivate Location  --------------
-//	@FindBy(xpath="//td//span[@class='status-export']")
+
 	@FindBy(xpath="//td//input[@class='slider-toggle']")
 	WebElement locationStatus;
-
-	
-//	public String locationStatus() throws InterruptedException
-//	{		
-//		driver.navigate().refresh();
-//		threadSleep(10000);
-////		String locStatus = locationStatus.getText();
-////		System.out.println("Location status is: " +locStatus);
-////		return locStatus;
-//		
-//		String locationId = locationStatus.getAttribute("data-location_id");
-//		if(locationId.equals("1"))
-//		{
-//			System.out.println("Location status id is: " +locationId +" - Deactivated(1)");
-//			return "Deactivated";
-//		}
-//		else 
-//		{ 
-// 		System.out.println("Location status id is: " +locationId +" - Activated(2)");
-//		return "Activated";
-//		}
-//		
-//	}
 	
 	@FindBy(xpath ="(//td//span[@class='slider round'])[1]")
 	WebElement changeStatus;
@@ -316,7 +292,7 @@ public class LocationMaster extends CommonComponents
 	
 	public String activeDeactiveStatus() throws InterruptedException
 	{
-		threadSleep(5000);
+		invisibilityOfWebElement(statusToast);
 		changeStatus.click();
 		String alertText = driver.switchTo().alert().getText();
 		System.out.println(alertText);
@@ -330,6 +306,7 @@ public class LocationMaster extends CommonComponents
 	
 	public void changeStatusQuick()
 	{
+		invisibilityOfWebElement(statusToast);
 		changeStatus.click();
 		driver.switchTo().alert().accept();
 		driver.navigate().refresh();
@@ -343,6 +320,7 @@ public class LocationMaster extends CommonComponents
 	
 	public boolean exportCSV() throws InterruptedException {
 
+		invisibilityOfWebElement(statusToast);
         exportCSV.click();
 
         String downloadPath = "C:\\Users\\Guncha\\Downloads";
@@ -393,24 +371,32 @@ public class LocationMaster extends CommonComponents
 		
 		public boolean exportPDF() throws InterruptedException {
 
-			exportPDF.click();
-			Thread.sleep(3000);
-			Set<String> windows = driver.getWindowHandles();
-			Iterator<String> itr = windows.iterator();
-			int count = windows.size();
-			System.out.println("Window size is : "+count);
-	        while (count > 1) 
-	        {
-	        	String parent = itr.next();
-	 	        String child = itr.next();
-	 	        driver.switchTo().window(child);
-	 	        driver.close();
-	 	        driver.switchTo().window(parent);
-	 	        driver.switchTo().defaultContent();
-	            return true;	           
-	        }
-	       
-	        return false;
+		    String parentWindow = driver.getWindowHandle();
+
+		    exportPDF.click();
+
+		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		    wait.until(d -> d.getWindowHandles().size() > 1);
+
+		    Set<String> allWindows = driver.getWindowHandles();
+		    System.out.println("Window size is : " + allWindows.size());
+
+		    if (allWindows.size() > 1) 
+		    {
+		        for (String window : allWindows) 
+		        {
+		            if (!window.equals(parentWindow)) 
+		            {
+		                driver.switchTo().window(window);
+		                driver.close();     // close print preview
+		            }
+		        }
+		        driver.switchTo().window(parentWindow);
+		        return true;
+		    }
+
+		    return false;
+
 	    }	
 		
 }
