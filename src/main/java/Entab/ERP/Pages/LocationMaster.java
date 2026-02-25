@@ -171,13 +171,14 @@ public class LocationMaster extends CommonComponents
 	@FindBy(xpath ="//i[@title='Edit']")
 	WebElement editLocation;
 	
-	@FindBy(xpath ="//span[@id='headerName']")
+	@FindBy(xpath ="//span[@id='headerName' and text()='Update Location']")
 	WebElement updateLocation;
 	
 	public String updateLocationPage() throws InterruptedException
 	{
 		invisibilityOfWebElement(toast);
 		editLocation.click();
+		visibilityOfWebElement(updateLocation);
 		String text = updateLocation.getText();
 		System.out.println("Update Location Header text is : " +text);
 		closeButton.click();

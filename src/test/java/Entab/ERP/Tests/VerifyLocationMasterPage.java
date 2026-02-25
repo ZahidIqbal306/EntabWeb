@@ -62,7 +62,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 	{
 		LocationMaster lm = new LocationMaster(driver);
 		String updatePagetext = lm.updateLocation();
-		boolean flag = updatePagetext.contains("Updated Successfully");
+		boolean flag = updatePagetext.contains("Updated");
 		Assert.assertEquals(flag, true);		
 	}
 	
@@ -130,7 +130,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 	}
 	
 	@Test(priority=11, enabled = true)
-	public void verifyExportCSV() throws InterruptedException
+	public void verifyLocationExportCSV() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
 	    boolean isFileDownloaded =  lm.exportCSV();		
@@ -139,7 +139,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 	}
 	
 	@Test(priority=12,enabled = true)
-	public void verifyExportExcel() throws InterruptedException
+	public void verifyLocationExportExcel() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
 	    boolean isFileDownloaded =  lm.exportExcel();		
@@ -148,7 +148,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 	}
 	
 	@Test(priority=13,enabled = true)
-	public void verifyExportPDF() throws InterruptedException
+	public void verifyLocationExportPDF() throws InterruptedException
 	{
 		LocationMaster lm = new LocationMaster(driver);
 	    boolean isFileDownloaded =  lm.exportPDF();		

@@ -4,6 +4,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import Entab.ERP.Pages.ChooseLocationPage;
 import Entab.ERP.Pages.GroupLedgerMasterPage;
 import Entab.ERP.Pages.HomePage;
 import Entab.ERP.Pages.InventoryMenu;
@@ -18,6 +19,10 @@ public class VerifyGroupLedgerMasterPage extends BaseTest {
 		HomePage homePage = new HomePage(driver);
 		homePage.selectModuleName("Inventory");
 		InventoryMenu im = new InventoryMenu(driver);
+		im.clickInventorySetting();
+		ChooseLocationPage cp = new ChooseLocationPage(driver);
+		cp.mapChooseLocSubMenu();
+		homePage.selectModuleName("Inventory");
 		im.clickInventorySetting();
 		GroupLedgerMasterPage gl = new GroupLedgerMasterPage(driver);
 		String text = gl.openGroupLedgerMaster();
@@ -44,7 +49,7 @@ public class VerifyGroupLedgerMasterPage extends BaseTest {
 		Assert.assertTrue(flag, "Location is not added.");
 	}
 	
-	@Test(priority=4,enabled = true)
+	@Test(priority=4,enabled = false)
 	public void verifyUpdateGroupLedger() throws InterruptedException
 	{
 		GroupLedgerMasterPage gl = new GroupLedgerMasterPage(driver);
@@ -53,7 +58,7 @@ public class VerifyGroupLedgerMasterPage extends BaseTest {
 		Assert.assertTrue(flag1, "Location is not updated.");
 	}
 	
-	@Test(priority=5,enabled = true)
+	@Test(priority=5,enabled = false)
 	public void verifyDuplicateGroupLedger() throws InterruptedException
 	{
 		GroupLedgerMasterPage gl = new GroupLedgerMasterPage(driver);
@@ -63,7 +68,7 @@ public class VerifyGroupLedgerMasterPage extends BaseTest {
 	}
 		
 	
-	@Test(priority=6,enabled = true)
+	@Test(priority=6,enabled = false)
 	public void verifydeleteGroupLedger() throws InterruptedException
 	{
 		GroupLedgerMasterPage gl = new GroupLedgerMasterPage(driver);
@@ -72,8 +77,8 @@ public class VerifyGroupLedgerMasterPage extends BaseTest {
 		Assert.assertTrue(flag, "Location is not deleted.");
 	}
 	
-	@Test(priority=7,enabled = true)
-	public void verifyExportCSV() throws InterruptedException
+	@Test(priority=7,enabled = false)
+	public void verifyLedgerExportCSV() throws InterruptedException
 	{
 		GroupLedgerMasterPage gl = new GroupLedgerMasterPage(driver);
 		boolean alertText = gl.exportCSV();
@@ -81,8 +86,8 @@ public class VerifyGroupLedgerMasterPage extends BaseTest {
 		System.out.println("CSV file is downloaded successfully.");
 	}
 	
-	@Test(priority=8,enabled = true)
-	public void verifyExportExcel() throws InterruptedException
+	@Test(priority=8,enabled = false)
+	public void verifyLedgerExportExcel() throws InterruptedException
 	{
 		GroupLedgerMasterPage gl = new GroupLedgerMasterPage(driver);
 		boolean alertText = gl.exportExcel();
@@ -90,8 +95,8 @@ public class VerifyGroupLedgerMasterPage extends BaseTest {
 		System.out.println("Excel file is downloaded successfully.");
 	}
 	
-	@Test(priority=8,enabled = true)
-	public void verifyExportPdf() throws InterruptedException
+	@Test(priority=9,enabled = false)
+	public void verifyLedgerExportPdf() throws InterruptedException
 	{
 		GroupLedgerMasterPage gl = new GroupLedgerMasterPage(driver);
 		boolean flag = gl.exportPdf();

@@ -27,65 +27,17 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	@FindBy(xpath="//a[@class='btn btn-header-link']")
 	WebElement groupLedgerHeaderText;
 	
-	@FindBy(xpath="//h3[text()='Select Location']")
-	WebElement chooseLocationHeader;
-	
-	@FindBy(xpath="//select[@data-select2-id='groupCompanySelect']")
-	WebElement selectGroupCompany;
-	
-	@FindBy(xpath="//select[@data-select2-id='companySelect']")
-	WebElement selectCompany;
-	
-	@FindBy(xpath="//select[@data-select2-id='locationSelect']")
-	WebElement selectLocation;
-	
-	@FindBy(xpath="//button[@id='confirmButton']")
-	WebElement submitLocation;
-	
 	@FindBy(xpath="//th[@aria-label='Group Name']")
 	WebElement groupNameHeaderText;
 	
 	public String openGroupLedgerMaster() throws InterruptedException
 	{
-		String headertext = "";
 		groupLedgerMasterSubmenu.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		threadSleep(10000);
-		try 
-		{
-	        driver.switchTo().alert();
-			String alertText = driver.switchTo().alert().getText();
-			System.out.println(alertText);
-			driver.switchTo().alert().accept();
-			//visibilityOfWebElement(chooseLocationHeader);
-			threadSleep(5000);
-			String pageText = chooseLocationHeader.getText();
-			System.out.println("Open Page name is : " +pageText);
-			selectByVisibleText(selectGroupCompany, "Inventory Group");
-			selectByVisibleText(selectCompany, "Inventory Managment Test School");
-			selectByVisibleText(selectLocation, "Biological Lab Equipment");
-			submitLocation.click();
-			System.out.println("Location is mapped successfully.");
-			visibilityOfWebElement(groupNameHeaderText);
-			headertext = groupLedgerHeaderText.getText();
-			headertext.trim();
-			System.out.println(headertext);
-	    } 
-		catch (NoAlertPresentException e)		
-		{
-			visibilityOfWebElement(chooseLocationHeader);
-			String pageText = chooseLocationHeader.getText();
-			System.out.println("Open Page name is : " +pageText);
-			selectByVisibleText(selectGroupCompany, "Inventory Group");
-			selectByVisibleText(selectCompany, "Inventory Managment Test School");
-			selectByVisibleText(selectLocation, "Biological Lab Equipment");
-			submitLocation.click();
-			System.out.println("Location is mapped successfully.");
-			visibilityOfWebElement(groupNameHeaderText);
-			headertext = groupLedgerHeaderText.getText();
-			headertext.trim();
-			System.out.println(headertext);
-	    }
+		visibilityOfWebElement(groupNameHeaderText);
+		String headertext = groupLedgerHeaderText.getText();
+		headertext.trim();
+		System.out.println(headertext);
 		return headertext;
 	}
 	
@@ -120,6 +72,7 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	{
 		visibilityOfWebElement(addGL);
 		addGL.click();
+		visibilityOfWebElement(groupName);
 		groupName.clear();
 		priority.clear();
 		visibilityOfWebElement(saveGL);
@@ -136,6 +89,9 @@ public class GroupLedgerMasterPage extends CommonComponents{
 		return natureFlag && groupFlag && priorityFlag;			
 	}
 	
+	@FindBy(xpath ="//span[@id='headerLabel' and text()='Add Group Ledger']")
+	WebElement addLocPage;
+	
 	@FindBy(xpath ="//div[@class='e-toast-content']")
 	WebElement addLedgerToast;
 	
@@ -146,8 +102,9 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	{
 		visibilityOfWebElement(addGL);
 		addGL.click();
-		visibilityOfWebElement(saveGL);
-		//natureOfGroup.click();
+		threadSleep(5000);
+		//visibilityOfWebElement(saveGL);
+		natureOfGroup.click();
 		selectGroupLedger.click();
 		natureOfGroup.click();
 		
@@ -169,6 +126,7 @@ public class GroupLedgerMasterPage extends CommonComponents{
 		visibilityOfWebElement(addLedgerToast);
 		String toastText = addLedgerToast.getText();
 		System.out.println(toastText);
+		invisibilityOfWebElement(addLedgerToast);
 		return 	toastText;
 	}
 
@@ -254,6 +212,7 @@ public class GroupLedgerMasterPage extends CommonComponents{
 		visibilityOfWebElement(deleteLedgerToast);
 		String deleteToast = deleteLedgerToast.getText();
 		System.out.println(deleteToast);
+		invisibilityOfWebElement(deleteLedgerToast);
 		return 	deleteToast;		
 	}	
 	

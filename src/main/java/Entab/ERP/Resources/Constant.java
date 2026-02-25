@@ -27,9 +27,9 @@ public class Constant {
 	static Map<String,String> verifyDetetedUsedLocation=new LinkedHashMap<String, String>();
 	static Map<String,String> verifyDeactivateLocation=new LinkedHashMap<String, String>();
 	static Map<String,String> verifyActivateLocation=new LinkedHashMap<String, String>();
-	static Map<String,String> verifyExportCSV=new LinkedHashMap<String, String>();
-	static Map<String,String> verifyExportExcel=new LinkedHashMap<String, String>();
-	static Map<String,String> verifyExportPDF=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyLocationExportCSV=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyLocationExportExcel=new LinkedHashMap<String, String>();
+	static Map<String,String> verifyLocationExportPDF=new LinkedHashMap<String, String>();
 
 	// Verify Group Ledger Master Page
 	static Map<String,String> verifyGroupLedgerMasterPage=new LinkedHashMap<String, String>();
@@ -145,22 +145,22 @@ public class Constant {
 		verifyActivateLocation.put("Step 4 : ","Location has been Activated successfully.");	
 		
 		//Verify Export CSV Functionality
-		verifyExportCSV.put("Step 1 : ","Login with Valid Credential.");
-		verifyExportCSV.put("Step 2 : ","Open the Inventory > Location Master Page");
-		verifyExportCSV.put("Step 3 : ","Now Click on the CSV button.");
-		verifyExportCSV.put("Step 4 : ","CSV file is downloaded successfully.");
+		verifyLocationExportCSV.put("Step 1 : ","Login with Valid Credential.");
+		verifyLocationExportCSV.put("Step 2 : ","Open the Inventory > Location Master Page");
+		verifyLocationExportCSV.put("Step 3 : ","Now Click on the CSV button.");
+		verifyLocationExportCSV.put("Step 4 : ","CSV file is downloaded successfully.");
 		
 		//Verify Export Excel Functionality
-		verifyExportExcel.put("Step 1 : ","Login with Valid Credential.");
-		verifyExportExcel.put("Step 2 : ","Open the Inventory > Location Master Page");
-		verifyExportExcel.put("Step 3 : ","Now Click on the export Excel button.");
-		verifyExportExcel.put("Step 4 : ","Excel file is downloaded successfully.");
+		verifyLocationExportExcel.put("Step 1 : ","Login with Valid Credential.");
+		verifyLocationExportExcel.put("Step 2 : ","Open the Inventory > Location Master Page");
+		verifyLocationExportExcel.put("Step 3 : ","Now Click on the export Excel button.");
+		verifyLocationExportExcel.put("Step 4 : ","Excel file is downloaded successfully.");
 		
 		//Verify Export Print Functionality
-		verifyExportPDF.put("Step 1 : ","Login with Valid Credential.");
-		verifyExportPDF.put("Step 2 : ","Open the Inventory > Location Master Page");
-		verifyExportPDF.put("Step 3 : ","Now Click on the print button.");
-		verifyExportPDF.put("Step 4 : ","Pdf file is opened into the next tab.");
+		verifyLocationExportPDF.put("Step 1 : ","Login with Valid Credential.");
+		verifyLocationExportPDF.put("Step 2 : ","Open the Inventory > Location Master Page");
+		verifyLocationExportPDF.put("Step 3 : ","Now Click on the print button.");
+		verifyLocationExportPDF.put("Step 4 : ","Pdf file is opened into the next tab.");
 	
 	
 // --------------- Group Ledger Master Page --------------------------------------------------------
@@ -296,23 +296,23 @@ public class Constant {
 			{
 				return verifyActivateLocation;
 			}
-			else if(key.equalsIgnoreCase("verifyExportCSV"))
+			else if(key.equalsIgnoreCase("verifyLocationExportCSV"))
 			{
-				return verifyExportCSV;
+				return verifyLocationExportCSV;
 			}
-			else if(key.equalsIgnoreCase("verifyExportExcel"))
+			else if(key.equalsIgnoreCase("verifyLocationExportExcel"))
 			{
-				return verifyExportExcel;
+				return verifyLocationExportExcel;
 			}
-			else if(key.equalsIgnoreCase("verifyExportPDF"))
+			else if(key.equalsIgnoreCase("verifyLocationExportPDF"))
 			{
-				return verifyExportPDF;
+				return verifyLocationExportPDF;
 			}	
 			
 // ------------------------------ Group Ledger Master Page -------------------------------------------------------			
 			else if(key.equalsIgnoreCase("verifyGroupLedgerMasterPage"))
 			{
-				return verifyLocationMasterPage;
+				return verifyGroupLedgerMasterPage;
 			}
 			else if(key.equalsIgnoreCase("verifyMandatroyFieldGroupLedger"))
 			{
@@ -333,6 +333,18 @@ public class Constant {
 			else if(key.equalsIgnoreCase("verifydeleteGroupLedger"))
 			{
 				return verifydeleteGroupLedger;
+			}
+			else if(key.equalsIgnoreCase("verifyLedgerExportCSV"))
+			{
+				return verifyLedgerExportCSV;
+			}
+			else if(key.equalsIgnoreCase("verifyLedgerExportExcel"))
+			{
+				return verifyLedgerExportExcel;
+			}
+			else if(key.equalsIgnoreCase("verifyLedgerExportPdf"))
+			{
+				return verifyLedgerExportPdf;
 			}
 				
 			
