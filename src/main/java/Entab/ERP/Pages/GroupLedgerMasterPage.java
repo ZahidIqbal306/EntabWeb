@@ -329,7 +329,7 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	{
 		threadSleep(2000);
 		exportPdfButton.click();
-		Thread.sleep(2000);
+		threadSleep(4000);
 		Set<String> windows = driver.getWindowHandles();
 		Iterator<String> itr = windows.iterator();
 		int count = windows.size();

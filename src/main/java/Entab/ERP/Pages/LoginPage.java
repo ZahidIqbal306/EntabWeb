@@ -28,7 +28,7 @@ public class LoginPage extends CommonComponents{
 		System.out.println("Url is loaded successfully : " + url);
 		threadSleep(5000);
 		//visibilityOfWebElement(enterLogin);
-		enterLogin.click();
+		//enterLogin.click();
 		threadSleep(3000);		
 	}
 	
