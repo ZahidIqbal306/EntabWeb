@@ -31,8 +31,9 @@ public class LoginPage extends CommonComponents{
 		System.out.println("Url is loaded successfully : " + url);
 		threadSleep(5000);
 		//visibilityOfWebElement(schoolLogo);
-		enterLogin.click();
-		threadSleep(3000);		
+		//enterLogin.click();
+		//visibilityOfWebElement(enterLogin);
+		//enterLogin.click();
 	}
 	
 	@FindBy(xpath = "//div[@class='login-form-blk login-blk']//p[contains(text(),'Enter the registered mobile no. with school')]")

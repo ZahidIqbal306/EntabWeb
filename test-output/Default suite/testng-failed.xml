@@ -8,7 +8,11 @@
           <include name="logOut"/>
           <include name="tearDown"/>
           <include name="lauchApplication"/>
+<<<<<<< HEAD
           <include name="verifyAddGroupLedger"/>
+=======
+          <include name="verifyExportPdf"/>
+>>>>>>> zahid
         </methods>
       </class> <!-- Entab.ERP.Tests.VerifyGroupLedgerMasterPage -->
     </classes>

@@ -270,11 +270,8 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	
 	public boolean exportPdf() throws InterruptedException
 	{
-
 	    String parentWindow = driver.getWindowHandle();
-
 	    exportPdfButton.click();
-
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	    wait.until(d -> d.getWindowHandles().size() > 1);
 
@@ -294,8 +291,7 @@ public class GroupLedgerMasterPage extends CommonComponents{
 	        driver.switchTo().window(parentWindow);
 	        return true;
 	    }
-
-	    return false;
+	    return false; 	
 	}
 
 

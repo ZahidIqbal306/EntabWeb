@@ -1,10 +1,8 @@
 package Entab.ERP.Resources;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
-public class ExtentReporterNG {
-	
+public class ExtentReporterNG {	
 	
 	public static ExtentReports getExtentReportObject()
 	{
@@ -21,8 +19,6 @@ public class ExtentReporterNG {
 		er.setSystemInfo("Environment", "QA-Dev");
 		er.setSystemInfo("QA", "Mazhar");
 		er.setSystemInfo("QA Lead", "Zahid Iqbal");
-		return er;
-		
+		return er;		
 	}
-
 }

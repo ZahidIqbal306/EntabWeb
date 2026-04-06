@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -142,6 +143,61 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </reporter-output>
         </test-method> <!-- logOut -->
         <test-method is-config="true" signature="tearDown()[pri:0, instance:Entab.ERP.Tests.VerifyGroupLedgerMasterPage@5b7a5baa]" started-at="2026-02-25T12:31:08 IST" name="tearDown" finished-at="2026-02-25T12:31:08 IST" duration-ms="224" status="PASS">
+=======
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-04-02T12:56:09 IST" name="Default suite" finished-at="2026-04-02T12:57:54 IST" duration-ms="104952">
+    <groups>
+    </groups>
+    <test started-at="2026-04-02T12:56:09 IST" name="Default test" finished-at="2026-04-02T12:57:54 IST" duration-ms="104952">
+      <class name="Entab.ERP.Tests.VerifyGroupLedgerMasterPage">
+        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:Entab.ERP.Tests.VerifyGroupLedgerMasterPage@51399530]" started-at="2026-04-02T12:56:09 IST" name="lauchApplication" finished-at="2026-04-02T12:56:20 IST" duration-ms="11051" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lauchApplication -->
+        <test-method signature="verifyGroupLedgerMasterPage()[pri:1, instance:Entab.ERP.Tests.VerifyGroupLedgerMasterPage@51399530]" started-at="2026-04-02T12:56:20 IST" name="verifyGroupLedgerMasterPage" finished-at="2026-04-02T12:56:46 IST" duration-ms="25081" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGroupLedgerMasterPage -->
+        <test-method signature="verifyMandatroyFieldGroupLedger()[pri:2, instance:Entab.ERP.Tests.VerifyGroupLedgerMasterPage@51399530]" started-at="2026-04-02T12:56:46 IST" name="verifyMandatroyFieldGroupLedger" finished-at="2026-04-02T12:56:55 IST" depends-on-methods="Entab.ERP.Tests.VerifyGroupLedgerMasterPage.verifyGroupLedgerMasterPage" duration-ms="8988" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMandatroyFieldGroupLedger -->
+        <test-method signature="verifyAddGroupLedger()[pri:3, instance:Entab.ERP.Tests.VerifyGroupLedgerMasterPage@51399530]" started-at="2026-04-02T12:56:55 IST" name="verifyAddGroupLedger" finished-at="2026-04-02T12:57:03 IST" duration-ms="8077" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddGroupLedger -->
+        <test-method signature="verifyUpdateGroupLedger()[pri:4, instance:Entab.ERP.Tests.VerifyGroupLedgerMasterPage@51399530]" started-at="2026-04-02T12:57:03 IST" name="verifyUpdateGroupLedger" finished-at="2026-04-02T12:57:09 IST" duration-ms="6342" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUpdateGroupLedger -->
+        <test-method signature="verifyDuplicateGroupLedger()[pri:5, instance:Entab.ERP.Tests.VerifyGroupLedgerMasterPage@51399530]" started-at="2026-04-02T12:57:09 IST" name="verifyDuplicateGroupLedger" finished-at="2026-04-02T12:57:26 IST" duration-ms="17317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDuplicateGroupLedger -->
+        <test-method signature="verifydeleteGroupLedger()[pri:6, instance:Entab.ERP.Tests.VerifyGroupLedgerMasterPage@51399530]" started-at="2026-04-02T12:57:26 IST" name="verifydeleteGroupLedger" finished-at="2026-04-02T12:57:33 IST" duration-ms="6620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydeleteGroupLedger -->
+        <test-method signature="verifyExportCSV()[pri:7, instance:Entab.ERP.Tests.VerifyGroupLedgerMasterPage@51399530]" started-at="2026-04-02T12:57:33 IST" name="verifyExportCSV" finished-at="2026-04-02T12:57:36 IST" duration-ms="3207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExportCSV -->
+        <test-method signature="verifyExportExcel()[pri:8, instance:Entab.ERP.Tests.VerifyGroupLedgerMasterPage@51399530]" started-at="2026-04-02T12:57:36 IST" name="verifyExportExcel" finished-at="2026-04-02T12:57:38 IST" duration-ms="2221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExportExcel -->
+        <test-method signature="verifyExportPdf()[pri:8, instance:Entab.ERP.Tests.VerifyGroupLedgerMasterPage@51399530]" started-at="2026-04-02T12:57:38 IST" name="verifyExportPdf" finished-at="2026-04-02T12:57:47 IST" duration-ms="8570" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExportPdf -->
+        <test-method is-config="true" signature="logOut()[pri:0, instance:Entab.ERP.Tests.VerifyGroupLedgerMasterPage@51399530]" started-at="2026-04-02T12:57:47 IST" name="logOut" finished-at="2026-04-02T12:57:54 IST" duration-ms="7385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOut -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Entab.ERP.Tests.VerifyGroupLedgerMasterPage@51399530]" started-at="2026-04-02T12:57:54 IST" name="tearDown" finished-at="2026-04-02T12:57:54 IST" duration-ms="132" status="PASS">
+>>>>>>> zahid
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
