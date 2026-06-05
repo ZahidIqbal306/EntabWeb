@@ -8,18 +8,26 @@
     <classes>
       <class name="Entab.ERP.Tests.VerifyGroupLedgerMasterPage">
         <methods>
-          <include name="verifyLedgerExportPdf"/>
-          <include name="verifydeleteGroupLedger"/>
-          <include name="verifyDuplicateGroupLedger"/>
           <include name="logOut"/>
+          <include name="verifyGroupLedgerMasterPage"/>
           <include name="tearDown"/>
-          <include name="verifyLedgerExportExcel"/>
-          <include name="verifyUpdateGroupLedger"/>
-          <include name="verifyLedgerExportCSV"/>
           <include name="lauchApplication"/>
           <include name="verifyAddGroupLedger"/>
+          <include name="verifyMandatroyFieldGroupLedger"/>
         </methods>
       </class> <!-- Entab.ERP.Tests.VerifyGroupLedgerMasterPage -->
+      <class name="Entab.ERP.Tests.VerifyLocationMasterPage">
+        <methods>
+          <include name="verifyLocationExportExcel"/>
+          <include name="logOut"/>
+          <include name="verifyLocationExportCSV"/>
+          <include name="tearDown"/>
+          <include name="lauchApplication"/>
+          <include name="verifyLocationExportPDF"/>
+          <include name="verifyActivateLocation"/>
+          <include name="verifyLocationMasterPage"/>
+        </methods>
+      </class> <!-- Entab.ERP.Tests.VerifyLocationMasterPage -->
     </classes>
   </test> <!-- Login Page Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
