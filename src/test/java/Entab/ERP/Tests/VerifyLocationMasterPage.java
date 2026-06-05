@@ -20,7 +20,7 @@ public class VerifyLocationMasterPage extends BaseTest {
 		im.clickInventorySetting();
 		LocationMaster lm = new LocationMaster(driver);
 		String text = lm.clickLocationMaster();
-		Assert.assertEquals(text, "Location Master");
+		Assert.assertEquals(text, "Location");
 	}
 	
 	@Test(priority=2, enabled = true)

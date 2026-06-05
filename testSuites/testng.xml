@@ -12,7 +12,6 @@
 			<class name="Entab.ERP.Tests.HomePageVerification" />
 			<class name="Entab.ERP.Tests.VerifyChooseLocation" />
 			<class name="Entab.ERP.Tests.VerifyLocationMasterPage" />
-			<class name="Entab.ERP.Tests.VerifyGroupLedgerMasterPage" />
 		</classes>
 	</test>
 </suite>

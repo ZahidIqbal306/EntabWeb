@@ -1,7 +1,9 @@
 D:\AuotmationCode\Inventory\src\test\java\Entab\ERP\Tests\VerifyGroupLedgerMasterPage.java
 D:\AuotmationCode\Inventory\src\test\java\Entab\ERP\TestComponents\Retry.java
+D:\AuotmationCode\Inventory\src\test\java\Entab\ERP\Tests\VerifyChooseLocation.java
 D:\AuotmationCode\Inventory\src\test\java\Entab\ERP\Tests\LoginVerification.java
 D:\AuotmationCode\Inventory\src\test\java\Entab\ERP\Tests\HomePageVerification.java
+D:\AuotmationCode\Inventory\src\test\java\Entab\ERP\Tests\VerifyUnitMasterInventoryPage.java
 D:\AuotmationCode\Inventory\src\test\java\Entab\ERP\TestComponents\BaseTest.java
 D:\AuotmationCode\Inventory\src\test\java\Entab\ERP\TestComponents\Listeners.java
 D:\AuotmationCode\Inventory\src\test\java\Entab\ERP\Tests\VerifyLocationMasterPage.java

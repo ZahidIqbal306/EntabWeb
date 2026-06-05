@@ -1,7 +1,9 @@
 Entab\ERP\TestComponents\Listeners.class
+Entab\ERP\Tests\VerifyUnitMasterInventoryPage.class
 Entab\ERP\TestComponents\Retry.class
 Entab\ERP\Tests\VerifyLocationMasterPage.class
 Entab\ERP\TestComponents\BaseTest.class
 Entab\ERP\Tests\VerifyGroupLedgerMasterPage.class
 Entab\ERP\Tests\HomePageVerification.class
 Entab\ERP\Tests\LoginVerification.class
+Entab\ERP\Tests\VerifyChooseLocation.class
